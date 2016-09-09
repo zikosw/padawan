@@ -1,0 +1,4 @@
+baseurl = "https://padawan.tech/"
+languageCode = "en-us"
+title = "Padawan journey"
+theme = "amp"

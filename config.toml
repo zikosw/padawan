@@ -16,7 +16,7 @@ googleAnalytics = "UA-84195554-1"
 [Params]
     intro = true
     headline = "Road to Jedi Master"
-    description = "In order to be the best jedi you can be, your lightsaber  must be sharp"
+    description = "In order to be the best jedi you can be, your tools  must be sharp"
     github = "https://github.com/#"
     linkedin = "https://linkedin.com/in/#/"
     gplus = "https://google.com/+#"

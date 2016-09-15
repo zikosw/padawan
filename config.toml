@@ -1,4 +1,47 @@
 baseurl = "https://padawan.tech/"
-languageCode = "en-us"
+languageCode = "th-th"
 title = "Padawan journey"
-theme = "amp"
+theme = "ghostwriter"
+copyright = "Jedi Z"
+googleAnalytics = "XXX"
+#disqusShortname = "XXX"
+
+[Author]
+    name = "Jedi Z"
+    profile = "https://google.com/+XXX"
+
+[Taxonomies]
+    tag = "tags"
+
+[Params]
+    intro = true
+    headline = "Road to Jedi Master"
+    description = "In order to be the best jedi you can be, your lightsaber  must be sharp"
+    github = "https://github.com/#"
+    linkedin = "https://linkedin.com/in/#/"
+    gplus = "https://google.com/+#"
+    twitter = "https://twitter.com/#"
+    stackoverflow = "http://stackoverflow.com/users/#/#"
+
+[Permalinks]
+    post = "/:year/:month/:day/:filename/"
+
+[[menu.main]]
+    name = "Blog"
+    url = "/"
+    weight = 1
+
+#[[menu.main]]
+#    name = "Projects"
+#    url = "/project/"
+#    weight = 2
+#
+#[[menu.main]]
+#    name = "Contact"
+#    url = "/page/contact/"
+#    weight = 3
+#
+#[[menu.main]]
+#    name = "About"
+#    url = "/page/about/"
+#    weight = 4

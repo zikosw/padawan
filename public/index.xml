@@ -5,17 +5,18 @@
     <link>https://padawan.tech/</link>
     <description>Recent content on Padawan journey</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>th-th</language>
+    <copyright>Jedi Z</copyright>
     <lastBuildDate>Fri, 09 Sep 2016 00:26:29 +0700</lastBuildDate>
     <atom:link href="https://padawan.tech/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>welcome</title>
-      <link>https://padawan.tech/post/welcome/</link>
+      <link>https://padawan.tech/2016/09/09/welcome/</link>
       <pubDate>Fri, 09 Sep 2016 00:26:29 +0700</pubDate>
       
-      <guid>https://padawan.tech/post/welcome/</guid>
-      <description>&lt;p&gt;Welcome every Padawan&lt;/p&gt;
+      <guid>https://padawan.tech/2016/09/09/welcome/</guid>
+      <description>&lt;p&gt;Welcome every Padawan!&lt;/p&gt;
 </description>
     </item>
     

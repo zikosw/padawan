@@ -1,6 +1,0 @@
-[submodule "themes/amp"]
-	path = themes/amp
-	url = git@github.com:pdevty/amp.git
-[submodule "themes/hugo-material-docs"]
-	path = themes/hugo-material-docs
-	url = git@github.com:digitalcraftsman/hugo-material-docs.git

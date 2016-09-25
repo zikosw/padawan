@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Vim Essential &middot; Jedi Z</title>
+        <meta name="description" content="เข้าใจพื้นฐานของ Vim และวิธีการใช้งานเบื้องต้น">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.16" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://padawan.tech/css/normalize.css">
+        <link rel="stylesheet" href="https://padawan.tech/css/highlight.css">
+        <link rel="stylesheet" href="https://padawan.tech/css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-84195554-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="Padawan journey" href="https://padawan.tech/">Padawan journey</a>
+                            </h1>
+                        
+                        <a class="button-square" href="https://padawan.tech/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                            <a class="button-square button-social hint--top" data-hint="Twitter" title="Twitter" href="https://twitter.com/#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/#">
+                                <i class="fa fa-github-alt"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Stack Overflow" title="Stack Overflow" href="http://stackoverflow.com/users/#/#">
+                                <i class="fa fa-stack-overflow"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="LinkedIn" title="LinkedIn" href="https://linkedin.com/in/#/">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Google+" title="Google+" href="https://google.com/&#43;#">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a title="Blog" href="/">Blog</a>
+    </li>
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Vim Essential</h1>
+    
+        <p class="post-description" itemprop="description">เข้าใจพื้นฐานของ Vim และวิธีการใช้งานเบื้องต้น</p>
+    
+    <p class="post-date">
+        <span>Published <time datetime="2016-09-15" itemprop="datePublished">Thu, Sep 15, 2016</time></span>
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="http://schema.org/Person">
+            <span itemprop="name">
+                <a href="https://google.com/&#43;XXX" itemprop="url" rel="author">Jedi Z</a>
+            </span>
+        </span>
+    </p>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
+    <ins class="adsbygoogle"
+     		style="display:inline-block;width:728px;height:90px"
+     		data-ad-client="ca-pub-6790702287470373"
+     		data-ad-slot="4471144903"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</header>
+
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+
+    
+
+<p>Vim นั้นเป็น Text editor ที่มีความสามารถเยอะมาก แต่ก็ต้องมีการเรียนรู้ที่เยอะด้วยเช่นกัน ทำให้หลายๆคนไม่กล้าที่จะทดลองใช้ แต่ถ้าหากเป็น Developer แล้วล่ะก็มีโอกาสที่จะได้ใช้ Vim เยอะมาก เพราะว่าใน Server นั้นโดยปกติจะติดตั้ง Vi หรือ Vim มาด้วยเสมอ
+ในบทความนี้จะอธิบายเฉพาะสิ่งที่เป็นพื้นฐานมากๆ และวิธีการใช้งานแบบพื้นฐานมากๆอีกเช่นกัน ซึ่งน่าจะเพียงพอต่อการใช้งานทั่วๆไป</p>
+
+<h1 id="พ-นฐานของ-vim">พื้นฐานของ Vim</h1>
+
+<p>ใน Vim นั้นเมื่อตอนที่เราเปิดขึ้นมานั้นจะไม่เหมือนกับ Text editor ตัวอื่นที่เราจะสามารถพิมพ์ข้อความลงไปได้เลย เพราะว่าใน Vim ใช้การกดคีย์ปกติเป็นคำสั่ง ดังนั้นเมื่อเราพึ่งเปิด Vim ขึ้นมา มันจะอยู่ในโหมดที่เรียกว่า NORMAL MODE ซึ่งจะเป็นโหมดที่รอรับคำสั่งต่างๆจากเรา ส่วนสำหรับโหมดที่เราใช้ในการพิมพ์ข้อความต่างๆลงไปจะเรียกว่า INSERT MODE
+การเปลี่ยนโหมดระหว่างสองโหมดนี้ทำได้ง่ายๆคือ ที่ NORMAL MODE กด I ก็จะกลายเป็น INSERT MODE  ถ้าหากต้องการออกจาก INSERT MODE ก็ให้กด <kbd>ESC</kbd></p>
+
+<ul>
+<li>NORMAL MODE<br />
+โดยปกติแล้วเราจะใช้คำสั่งต่างๆที่โหมดนี้ ตัวอย่างคำสั่งก็เช่น ถ้าเรากด <kbd>I</kbd> ก็จะเป็นการใช้คำสั่งให้เปลี่ยนไป INSERT MODE หรือจะคำสั่งบันทึกไฟล์ ออกจากโปรแกรม เราก็จะต้องกด <kbd>ESC</kbd> ให้ Vim มาอยู่ที่โหมดนี้ก่อนถึงจะใช้คำสั่งเหล่านั้นได้<br /></li>
+<li>INSERT MODE<br />
+สำหรับโหมดนี้ ทุกๆคีย์ที่เรากดลงไปก็จะกลายเป็นตัวอักษรเหมือนกับการใช้งาน Text editor ทั่วๆไป<br /></li>
+</ul>
+
+<p>วิธีการดูว่าตอนนี้ Vim อยู่ในโหมดไหนให้ดูที่ด้านซ้ายล่างของหน้าจอ<br />
+<img src="/img/vim/vim-0mode.png" alt="0.mode" /></p>
+
+<h1 id="การใช-เบ-องต-น">การใช้เบื่องต้น</h1>
+
+<p>สั่งให้ Vim เปิดไฟล์ hello.txt ขึ้นมา</p>
+
+<pre><code>$ vim hello.txt
+</code></pre>
+
+<p>จะได้หน้าตาแบบนี้
+สังเกตุที่โหมด ตอนนี้จะเป็น NORMAL โหมด
+<img src="/img/vim/vim-1open.png" alt="1.normal node after open file" /></p>
+
+<h2 id="แก-ไข">แก้ไข</h2>
+
+<p>ถ้าเราต้องการแก้ข้อความเป็น Hello world ก็จะต้องเปลี่ยนโหมดจาก NORMAL MODE เป็น INSERT MODE ซะก่อน โดยการกด I แล้วจากนั้นก็แก้ข้อความได้เลย
+ภาพเมื่อแก้เสร็จแล้ว
+<img src="/img/vim/vim-2edit.png" alt="2.insert mode after edit" /></p>
+
+<h2 id="บ-นท-ก">บันทึก</h2>
+
+<p>ถ้าต้องการจะบันทึกสิ่งที่เราแก้ไปในไฟล์ จะต้องกลับไปยัง NORMAL MODE ซะก่อนโดยการกด ESC แล้วจากนั้นให้กด <code>:w</code> หน้าจอจะได้แบบนี้
+<img src="/img/vim/vim-3save.png" alt="3.normal mode typing save" />
+ก็กด ENTER ได้เลย</p>
+
+<h2 id="ออกจาก-vim">ออกจาก Vim</h2>
+
+<p>ถ้าจะออกก็ให้ใช้คำสั่ง <code>:q</code></p>
+
+<h2 id="ออกแบบไม-บ-นท-ก">ออกแบบไม่บันทึก</h2>
+
+<p>ให้ใช้คำสั่ง <code>:q!</code></p>
+
+<h2 id="บ-นท-กแล-วออก">บันทึกแล้วออก</h2>
+
+<p>ให้ใช้คำสั่ง <code>:wq</code></p>
+
+<p>สำหรับคนที่ต้องการจะทดใช้ Vim อย่างจริงจัง คำสั่งที่ได้เขียนไว้นั้นถือว่าไม่เพียงพออย่างมาก ขอแนะนำให้อ่านเพิ่มเติมจากลิงค์ด้านล่าง</p>
+
+<h1 id="แหล-งไว-ศ-กษาเพ-มเต-ม">แหล่งไว้ศึกษาเพิ่มเติม</h1>
+
+<p>จริงๆแล้ว Vim มี resources ให้อ่านเยอะมาก แต่ในที่นี้จะแนะนำแค่บางเว็บที่คิดว่าน่าสนใจ</p>
+
+<ol>
+<li>เว็บแรกที่จะแนะนำคือ <a href="http://www.openvim.com">OpemVim</a> เพราะว่ามีการวางเนื้อหาที่เรียนรู้ง่ายดีแล้วก็มี Interactive ให้ทดลองเล่นบนเว็บด้วย<br /></li>
+<li>เว็บ <a href="https://vimgifs.com">Vimgif</a> เว็บนี้จะทำภาพเคลื่อนไหว (gif) ที่จะแสดงการใช้งานและผลลัพธ์ของคำสั่งใน Vim แต่ละคำสั่ง ตั้งแต่ a-z จนถึงคำสั่งพิเศษอื่นๆ ด้วย<br /></li>
+</ol>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+        <p class="post-tags">
+            <span>Tagged:</span>
+            
+                 <a href="/tags/vim/">Vim</a>
+            
+                 <a href="/tags/vim-%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B9%84%E0%B8%87/">vim ใช้ยังไง</a>
+            
+                 <a href="/tags/vim-%E0%B9%80%E0%B8%8B%E0%B8%9F%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B9%84%E0%B8%87/">vim เซฟยังไง</a>
+            
+                 <a href="/tags/vim-%E0%B8%AD%E0%B8%AD%E0%B8%81%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B9%84%E0%B8%87/">vim ออกยังไง</a>
+            
+                 <a href="/tags/essential/">Essential</a>
+            
+        </p>
+    
+
+    <div class="share">
+        <a class="icon-twitter" href="http://twitter.com/share?text=Vim%20Essential&url=https%3a%2f%2fpadawan.tech%2f2016%2f09%2f15%2fvim%2f"
+            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+            <i class="fa fa-twitter"></i>
+            <span class="hidden">Twitter</span>
+        </a>
+
+        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fpadawan.tech%2f2016%2f09%2f15%2fvim%2f"
+            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+            <i class="fa fa-facebook"></i>
+            <span class="hidden">Facebook</span>
+        </a>
+
+        <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fpadawan.tech%2f2016%2f09%2f15%2fvim%2f"
+           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+           <i class="fa fa-google-plus"></i>
+            <span class="hidden">Google+</span>
+        </a>
+    </div>
+</footer>
+
+        
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a title="Padawan journey" href="https://padawan.tech/">Padawan journey</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2016 / Powered by <a href="http://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="https://padawan.tech/js/jquery-1.11.3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+        <script src="https://padawan.tech/js/jquery.fitvids.js"></script>
+        <script src="https://padawan.tech/js/scripts.js"></script>
+    </body>
+</html>
+

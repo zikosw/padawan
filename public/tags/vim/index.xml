@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vim on Padawan journey</title>
+    <link>https://padawan.tech/tags/vim/</link>
+    <description>Recent content in Vim on Padawan journey</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>th-th</language>
+    <copyright>Jedi Z</copyright>
+    <lastBuildDate>Thu, 15 Sep 2016 22:48:45 +0700</lastBuildDate>
+    <atom:link href="https://padawan.tech/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Vim Essential</title>
+      <link>https://padawan.tech/2016/09/15/vim/</link>
+      <pubDate>Thu, 15 Sep 2016 22:48:45 +0700</pubDate>
+      
+      <guid>https://padawan.tech/2016/09/15/vim/</guid>
+      <description>
+
+&lt;p&gt;Vim นั้นเป็น Text editor ที่มีความสามารถเยอะมาก แต่ก็ต้องมีการเรียนรู้ที่เยอะด้วยเช่นกัน ทำให้หลายๆคนไม่กล้าที่จะทดลองใช้ แต่ถ้าหากเป็น Developer แล้วล่ะก็มีโอกาสที่จะได้ใช้ Vim เยอะมาก เพราะว่าใน Server นั้นโดยปกติจะติดตั้ง Vi หรือ Vim มาด้วยเสมอ
+ในบทความนี้จะอธิบายเฉพาะสิ่งที่เป็นพื้นฐานมากๆ และวิธีการใช้งานแบบพื้นฐานมากๆอีกเช่นกัน ซึ่งน่าจะเพียงพอต่อการใช้งานทั่วๆไป&lt;/p&gt;
+
+&lt;h1 id=&#34;พ-นฐานของ-vim&#34;&gt;พื้นฐานของ Vim&lt;/h1&gt;
+
+&lt;p&gt;ใน Vim นั้นเมื่อตอนที่เราเปิดขึ้นมานั้นจะไม่เหมือนกับ Text editor ตัวอื่นที่เราจะสามารถพิมพ์ข้อความลงไปได้เลย เพราะว่าใน Vim ใช้การกดคีย์ปกติเป็นคำสั่ง ดังนั้นเมื่อเราพึ่งเปิด Vim ขึ้นมา มันจะอยู่ในโหมดที่เรียกว่า NORMAL MODE ซึ่งจะเป็นโหมดที่รอรับคำสั่งต่างๆจากเรา ส่วนสำหรับโหมดที่เราใช้ในการพิมพ์ข้อความต่างๆลงไปจะเรียกว่า INSERT MODE
+การเปลี่ยนโหมดระหว่างสองโหมดนี้ทำได้ง่ายๆคือ ที่ NORMAL MODE กด I ก็จะกลายเป็น INSERT MODE  ถ้าหากต้องการออกจาก INSERT MODE ก็ให้กด &lt;kbd&gt;ESC&lt;/kbd&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;NORMAL MODE&lt;br /&gt;
+โดยปกติแล้วเราจะใช้คำสั่งต่างๆที่โหมดนี้ ตัวอย่างคำสั่งก็เช่น ถ้าเรากด &lt;kbd&gt;I&lt;/kbd&gt; ก็จะเป็นการใช้คำสั่งให้เปลี่ยนไป INSERT MODE หรือจะคำสั่งบันทึกไฟล์ ออกจากโปรแกรม เราก็จะต้องกด &lt;kbd&gt;ESC&lt;/kbd&gt; ให้ Vim มาอยู่ที่โหมดนี้ก่อนถึงจะใช้คำสั่งเหล่านั้นได้&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;INSERT MODE&lt;br /&gt;
+สำหรับโหมดนี้ ทุกๆคีย์ที่เรากดลงไปก็จะกลายเป็นตัวอักษรเหมือนกับการใช้งาน Text editor ทั่วๆไป&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;วิธีการดูว่าตอนนี้ Vim อยู่ในโหมดไหนให้ดูที่ด้านซ้ายล่างของหน้าจอ&lt;br /&gt;
+&lt;img src=&#34;https://padawan.tech/img/vim/vim-0mode.png&#34; alt=&#34;0.mode&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;การใช-เบ-องต-น&#34;&gt;การใช้เบื่องต้น&lt;/h1&gt;
+
+&lt;p&gt;สั่งให้ Vim เปิดไฟล์ hello.txt ขึ้นมา&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ vim hello.txt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;จะได้หน้าตาแบบนี้
+สังเกตุที่โหมด ตอนนี้จะเป็น NORMAL โหมด
+&lt;img src=&#34;https://padawan.tech/img/vim/vim-1open.png&#34; alt=&#34;1.normal node after open file&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;แก-ไข&#34;&gt;แก้ไข&lt;/h2&gt;
+
+&lt;p&gt;ถ้าเราต้องการแก้ข้อความเป็น Hello world ก็จะต้องเปลี่ยนโหมดจาก NORMAL MODE เป็น INSERT MODE ซะก่อน โดยการกด I แล้วจากนั้นก็แก้ข้อความได้เลย
+ภาพเมื่อแก้เสร็จแล้ว
+&lt;img src=&#34;https://padawan.tech/img/vim/vim-2edit.png&#34; alt=&#34;2.insert mode after edit&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;บ-นท-ก&#34;&gt;บันทึก&lt;/h2&gt;
+
+&lt;p&gt;ถ้าต้องการจะบันทึกสิ่งที่เราแก้ไปในไฟล์ จะต้องกลับไปยัง NORMAL MODE ซะก่อนโดยการกด ESC แล้วจากนั้นให้กด &lt;code&gt;:w&lt;/code&gt; หน้าจอจะได้แบบนี้
+&lt;img src=&#34;https://padawan.tech/img/vim/vim-3save.png&#34; alt=&#34;3.normal mode typing save&#34; /&gt;
+ก็กด ENTER ได้เลย&lt;/p&gt;
+
+&lt;h2 id=&#34;ออกจาก-vim&#34;&gt;ออกจาก Vim&lt;/h2&gt;
+
+&lt;p&gt;ถ้าจะออกก็ให้ใช้คำสั่ง &lt;code&gt;:q&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;ออกแบบไม-บ-นท-ก&#34;&gt;ออกแบบไม่บันทึก&lt;/h2&gt;
+
+&lt;p&gt;ให้ใช้คำสั่ง &lt;code&gt;:q!&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;บ-นท-กแล-วออก&#34;&gt;บันทึกแล้วออก&lt;/h2&gt;
+
+&lt;p&gt;ให้ใช้คำสั่ง &lt;code&gt;:wq&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;สำหรับคนที่ต้องการจะทดใช้ Vim อย่างจริงจัง คำสั่งที่ได้เขียนไว้นั้นถือว่าไม่เพียงพออย่างมาก ขอแนะนำให้อ่านเพิ่มเติมจากลิงค์ด้านล่าง&lt;/p&gt;
+
+&lt;h1 id=&#34;แหล-งไว-ศ-กษาเพ-มเต-ม&#34;&gt;แหล่งไว้ศึกษาเพิ่มเติม&lt;/h1&gt;
+
+&lt;p&gt;จริงๆแล้ว Vim มี resources ให้อ่านเยอะมาก แต่ในที่นี้จะแนะนำแค่บางเว็บที่คิดว่าน่าสนใจ&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;เว็บแรกที่จะแนะนำคือ &lt;a href=&#34;http://www.openvim.com&#34;&gt;OpemVim&lt;/a&gt; เพราะว่ามีการวางเนื้อหาที่เรียนรู้ง่ายดีแล้วก็มี Interactive ให้ทดลองเล่นบนเว็บด้วย&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;เว็บ &lt;a href=&#34;https://vimgifs.com&#34;&gt;Vimgif&lt;/a&gt; เว็บนี้จะทำภาพเคลื่อนไหว (gif) ที่จะแสดงการใช้งานและผลลัพธ์ของคำสั่งใน Vim แต่ละคำสั่ง ตั้งแต่ a-z จนถึงคำสั่งพิเศษอื่นๆ ด้วย&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

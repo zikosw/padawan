@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Haskell 101.01 Get Started! &middot; Jedi Z</title>
+        <title>Haskell 101.01 Get Started! &middot; Jedi</title>
         <meta name="description" content="ทำความรู้จักกับภาษา Haskell">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
@@ -88,20 +88,23 @@ ga('send', 'pageview');
     
     <p class="post-date">
         <span>Published <time datetime="2016-10-02" itemprop="datePublished">Sun, Oct 2, 2016</time></span>
+    
         <span>by</span>
         <span itemscope="" itemprop="author" itemtype="http://schema.org/Person">
             <span itemprop="name">
-                <a href="https://google.com/&#43;XXX" itemprop="url" rel="author">Jedi Z</a>
+                <a href="/authors/sonk" itemprop="url" rel="author">sonk</a>
             </span>
         </span>
+    
     </p>
+
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     
-    <ins class="adsbygoogle"
-     		style="display:inline-block;width:728px;height:90px"
-     		data-ad-client="ca-pub-6790702287470373"
-     		data-ad-slot="4471144903"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    
+    
+    
+    
+    
 </header>
 
 
@@ -110,9 +113,10 @@ ga('send', 'pageview');
 
     
 
-<p>ในวงการโปรแกรมเมอร์ทุกวันนี้ เพื่อนๆpadawanน่าจะเคยได้ยินเรื่องเกี่ยวกับ functional programming ซึ่งเป็นเทรนด์ที่กำลังมาแรงในปัจจุบัน ทำให้ผมอยากลองเล่นภาษาที่เป็น pure functional programming language และภาษาที่ผมเลือกจะศึกษาก็คือ Haskell นั่นเอง
-สำหรับภาษา Haskell นี้ผมคิดว่าจะทำเขียนเป็นซีรี่ย์ต่อกันไปเรื่อยๆ เพื่อที่ผมกับเพื่อนๆpadawanจะได้เรียนรู้ไปด้วยกัน
-ในตอนแรกนี้ผมจะพาเพื่อนๆมาทำความรู้จัก ติดตั้ง และลอง hello, world!! ในภาษา Haskell กัน</p>
+<p>ในวงการโปรแกรมเมอร์ทุกวันนี้ เพื่อนๆ padawan น่าจะเคยได้ยินเรื่องเกี่ยวกับ functional programming ซึ่งเป็นเทรนด์ที่กำลังมาแรงในปัจจุบัน ทำให้ผมอยากลองเล่นภาษาที่เป็น pure functional programming language และภาษาที่ผมเลือกจะศึกษาก็คือ Haskell นั่นเอง
+สำหรับภาษา Haskell นี้ ผมตั้งใจจะทำเขียนเป็นซีรี่ย์ต่อกันไปเรื่อยๆ เพื่อที่ผมกับเพื่อนๆจะได้เรียนรู้ไปด้วยกัน</p>
+
+<p>ในตอนแรกของซีรี่ย์นี้ ผมจะพาเพื่อนๆมาทำความรู้จัก ติดตั้ง และลองเขียน hello world ในภาษา Haskell กัน</p>
 
 <h1 id="ร-จ-กก-บ-haskell">รู้จักกับ Haskell</h1>
 
@@ -121,7 +125,7 @@ ga('send', 'pageview');
 
 <h1 id="การต-ดต-ง">การติดตั้ง</h1>
 
-<p>ภาษา Haskell ได้สนับสนุนการใช้งานในหลากหลายระบบปฏิบัติการ ทั้งใน Linux, Mac OS และ Windows โดยการติดตั้ง Compiler ภาษา Haskell นั้นจะมีเลือกติดตั้งได้ทั้งแบบ minimal ที่จะมีเพียงlibraryพื้นฐาน หรือแบบ Haskell Platform ที่จะมีการติดตั้งlibraryอื่นๆเพิ่มเติมมาด้วย
+<p>ภาษา Haskell ได้สนับสนุนการใช้งานในหลากหลายระบบปฏิบัติการ ทั้งใน Linux, Mac OS และ Windows โดยการติดตั้ง Compiler ภาษา Haskell นั้นจะมีเลือกติดตั้งได้ทั้งแบบ minimal ที่จะมีเพียง library พื้นฐาน หรือแบบ Haskell Platform ที่จะมีการติดตั้ง library อื่นๆเพิ่มเติมมาด้วย
 โดยในที่นี้ จะขอยกตัวอย่างการติดตั้งเฉพาะแบบ Haskell Platform ใน Ubuntu และ Mac OS เท่านั้น</p>
 
 <p>Ubuntu</p>
@@ -141,13 +145,13 @@ ga('send', 'pageview');
 <p><img src="/img/haskell/haskell-01-1.png" alt="hello-world-0" /></p>
 
 <p>หลังจากนั้น shell ของเพื่อนๆก็จะกลายเป็น Prelude ซึ่งเป็น module ที่รวบรวม standard library ของภาษา Haskell
-โดยคำสั่งที่เทียบเท่ากับการ print ของภาษาอื่นๆจะเป็น putStr หรือ putStrLn เพื่อที่จะขึ้นบรรทัดใหม่ที่ end of string</p>
+โดยคำสั่งที่เทียบเท่ากับการ print ของภาษาอื่นๆจะเป็น putStr หรือ putStrLn เพื่อที่จะขึ้นบรรทัดใหม่หลังข้อความที่ต้องการ print</p>
 
 <p><img src="/img/haskell/haskell-01-2.png" alt="hello-world-1" /></p>
 
 <h1 id="แหล-งไว-ศ-กษาเพ-มเต-ม">แหล่งไว้ศึกษาเพิ่มเติม</h1>
 
-<p>ในปัจจุบันภาษา Haskell มีแหล่งเรียนรู้มากมายที่ไม่ต้องเสียค่าใช้จ่าย ทั้งคอร์สเรียน หนังสือ เลยที่ผมคิดว่าน่าสนใจมีดังนี้</p>
+<p>ในปัจจุบันภาษา Haskell มีแหล่งเรียนรู้มากมายที่ไม่ต้องเสียค่าใช้จ่าย ทั้งคอร์สเรียน หนังสือ ผมได้เลือกมาแนะนำเพื่อนๆ ดังนี้</p>
 
 <ol>
 <li>หนังสือ <a href="http:http://learnyouahaskell.com/">Learn you a Haskell for Great Good!</a> โดยหนังสือจะฟรีในเวอร์ชันอ่านออนไลน์</li>
@@ -192,6 +196,24 @@ ga('send', 'pageview');
 </footer>
 
         
+    <div class="comments">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'padawantech';
+    var disqus_identifier = 'https:\/\/padawan.tech\/2016\/10\/02\/haskell-01\/';
+    var disqus_title = 'Haskell 101.01 Get Started!';
+    var disqus_url = 'https:\/\/padawan.tech\/2016\/10\/02\/haskell-01\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
     </article>
 </div>
 

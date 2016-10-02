@@ -18,9 +18,10 @@
       <guid>https://padawan.tech/2016/10/02/haskell-01/</guid>
       <description>
 
-&lt;p&gt;ในวงการโปรแกรมเมอร์ทุกวันนี้ เพื่อนๆpadawanน่าจะเคยได้ยินเรื่องเกี่ยวกับ functional programming ซึ่งเป็นเทรนด์ที่กำลังมาแรงในปัจจุบัน ทำให้ผมอยากลองเล่นภาษาที่เป็น pure functional programming language และภาษาที่ผมเลือกจะศึกษาก็คือ Haskell นั่นเอง
-สำหรับภาษา Haskell นี้ผมคิดว่าจะทำเขียนเป็นซีรี่ย์ต่อกันไปเรื่อยๆ เพื่อที่ผมกับเพื่อนๆpadawanจะได้เรียนรู้ไปด้วยกัน
-ในตอนแรกนี้ผมจะพาเพื่อนๆมาทำความรู้จัก ติดตั้ง และลอง hello, world!! ในภาษา Haskell กัน&lt;/p&gt;
+&lt;p&gt;ในวงการโปรแกรมเมอร์ทุกวันนี้ เพื่อนๆ padawan น่าจะเคยได้ยินเรื่องเกี่ยวกับ functional programming ซึ่งเป็นเทรนด์ที่กำลังมาแรงในปัจจุบัน ทำให้ผมอยากลองเล่นภาษาที่เป็น pure functional programming language และภาษาที่ผมเลือกจะศึกษาก็คือ Haskell นั่นเอง
+สำหรับภาษา Haskell นี้ ผมตั้งใจจะทำเขียนเป็นซีรี่ย์ต่อกันไปเรื่อยๆ เพื่อที่ผมกับเพื่อนๆจะได้เรียนรู้ไปด้วยกัน&lt;/p&gt;
+
+&lt;p&gt;ในตอนแรกของซีรี่ย์นี้ ผมจะพาเพื่อนๆมาทำความรู้จัก ติดตั้ง และลองเขียน hello world ในภาษา Haskell กัน&lt;/p&gt;
 
 &lt;h1 id=&#34;ร-จ-กก-บ-haskell&#34;&gt;รู้จักกับ Haskell&lt;/h1&gt;
 
@@ -29,7 +30,7 @@
 
 &lt;h1 id=&#34;การต-ดต-ง&#34;&gt;การติดตั้ง&lt;/h1&gt;
 
-&lt;p&gt;ภาษา Haskell ได้สนับสนุนการใช้งานในหลากหลายระบบปฏิบัติการ ทั้งใน Linux, Mac OS และ Windows โดยการติดตั้ง Compiler ภาษา Haskell นั้นจะมีเลือกติดตั้งได้ทั้งแบบ minimal ที่จะมีเพียงlibraryพื้นฐาน หรือแบบ Haskell Platform ที่จะมีการติดตั้งlibraryอื่นๆเพิ่มเติมมาด้วย
+&lt;p&gt;ภาษา Haskell ได้สนับสนุนการใช้งานในหลากหลายระบบปฏิบัติการ ทั้งใน Linux, Mac OS และ Windows โดยการติดตั้ง Compiler ภาษา Haskell นั้นจะมีเลือกติดตั้งได้ทั้งแบบ minimal ที่จะมีเพียง library พื้นฐาน หรือแบบ Haskell Platform ที่จะมีการติดตั้ง library อื่นๆเพิ่มเติมมาด้วย
 โดยในที่นี้ จะขอยกตัวอย่างการติดตั้งเฉพาะแบบ Haskell Platform ใน Ubuntu และ Mac OS เท่านั้น&lt;/p&gt;
 
 &lt;p&gt;Ubuntu&lt;/p&gt;
@@ -49,13 +50,13 @@
 &lt;p&gt;&lt;img src=&#34;https://padawan.tech/img/haskell/haskell-01-1.png&#34; alt=&#34;hello-world-0&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;หลังจากนั้น shell ของเพื่อนๆก็จะกลายเป็น Prelude ซึ่งเป็น module ที่รวบรวม standard library ของภาษา Haskell
-โดยคำสั่งที่เทียบเท่ากับการ print ของภาษาอื่นๆจะเป็น putStr หรือ putStrLn เพื่อที่จะขึ้นบรรทัดใหม่ที่ end of string&lt;/p&gt;
+โดยคำสั่งที่เทียบเท่ากับการ print ของภาษาอื่นๆจะเป็น putStr หรือ putStrLn เพื่อที่จะขึ้นบรรทัดใหม่หลังข้อความที่ต้องการ print&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://padawan.tech/img/haskell/haskell-01-2.png&#34; alt=&#34;hello-world-1&#34; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;แหล-งไว-ศ-กษาเพ-มเต-ม&#34;&gt;แหล่งไว้ศึกษาเพิ่มเติม&lt;/h1&gt;
 
-&lt;p&gt;ในปัจจุบันภาษา Haskell มีแหล่งเรียนรู้มากมายที่ไม่ต้องเสียค่าใช้จ่าย ทั้งคอร์สเรียน หนังสือ เลยที่ผมคิดว่าน่าสนใจมีดังนี้&lt;/p&gt;
+&lt;p&gt;ในปัจจุบันภาษา Haskell มีแหล่งเรียนรู้มากมายที่ไม่ต้องเสียค่าใช้จ่าย ทั้งคอร์สเรียน หนังสือ ผมได้เลือกมาแนะนำเพื่อนๆ ดังนี้&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;หนังสือ &lt;a href=&#34;http:http://learnyouahaskell.com/&#34;&gt;Learn you a Haskell for Great Good!&lt;/a&gt; โดยหนังสือจะฟรีในเวอร์ชันอ่านออนไลน์&lt;/li&gt;

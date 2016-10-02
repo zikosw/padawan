@@ -9,7 +9,7 @@ title = "Haskell 101.01 Get Started!"
 
 ในวงการโปรแกรมเมอร์ทุกวันนี้ เพื่อนๆpadawanน่าจะเคยได้ยินเรื่องเกี่ยวกับ functional programming ซึ่งเป็นเทรนด์ที่กำลังมาแรงในปัจจุบัน ทำให้ผมอยากลองเล่นภาษาที่เป็น pure functional programming language และภาษาที่ผมเลือกจะศึกษาก็คือ Haskell นั่นเอง
 สำหรับภาษา Haskell นี้ผมคิดว่าจะทำเขียนเป็นซีรี่ย์ต่อกันไปเรื่อยๆ เพื่อที่ผมกับเพื่อนๆpadawanจะได้เรียนรู้ไปด้วยกัน
-ในตอนแรกนี้ผมจะพาเพื่อนๆมาทำความรู้จัก ติดตั้ง และลอง hello, world!! ในภาษา Haskell กัน
+ในตอนแรกนี้ผมจะพาเพื่อนๆมาทำความรู้จัก ติดตั้ง และลองเขียน hello world ในภาษา Haskell กัน
 
 # รู้จักกับ Haskell
 ภาษา Haskell เป็น pure functional programming language โดยมี type system เป็น strong static typing
@@ -38,7 +38,7 @@ Mac OS
 ![hello-world-1](/img/haskell/haskell-01-2.png)
 
 # แหล่งไว้ศึกษาเพิ่มเติม
-ในปัจจุบันภาษา Haskell มีแหล่งเรียนรู้มากมายที่ไม่ต้องเสียค่าใช้จ่าย ทั้งคอร์สเรียน หนังสือ เลยที่ผมคิดว่าน่าสนใจมีดังนี้
+ในปัจจุบันภาษา Haskell มีแหล่งเรียนรู้มากมายที่ไม่ต้องเสียค่าใช้จ่าย ทั้งคอร์สเรียน หนังสือ ผมได้เลือกมาแนะนำเพื่อนๆ ดังนี้
 
 1.  หนังสือ [Learn you a Haskell for Great Good!](http:http://learnyouahaskell.com/) โดยหนังสือจะฟรีในเวอร์ชันอ่านออนไลน์
 2.  คอร์ส [Introduction to Functional Programming](https://www.edx.org/course/introduction-functional-programming-delftx-fp101x-0) โดยหลักๆแล้วเนื้อหาคอร์สนี้จะเกี่ยวกับ functional programming โดยผู้สอนจะใช้ภาษา Haskell ซึ่งเป็น pure functional programming language ในการสอน โดยการเรียนนั้นไม่มีค่าใช้จ่ายใดๆ จะเสียเงินเมื่อต้องการซื้อ Certificate ของคอร์สเท่านั้น  

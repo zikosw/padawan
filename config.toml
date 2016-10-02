@@ -4,10 +4,10 @@ title = "Padawan journey"
 theme = "ghostwriter"
 copyright = "Jedi Z"
 googleAnalytics = "UA-84195554-1"
-#disqusShortname = "XXX"
+disqusShortname = "padawantech"
 
 [Author]
-    name = "Jedi Z"
+    name = "Jedi"
     profile = "https://google.com/+XXX"
 
 [Taxonomies]

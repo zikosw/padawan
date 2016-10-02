@@ -1,9 +1,9 @@
 +++
-author = ""
+author = "ziko"
 date = "2016-09-15T22:48:45+07:00"
 description = "เข้าใจพื้นฐานของ Vim และวิธีการใช้งานเบื้องต้น"
 tags = ["Vim","vim ใช้ยังไง","vim เซฟยังไง","vim ออกยังไง","Essential"]
-title = "Vim Essential"
+title = "Vim Survivor"
 
 +++
 

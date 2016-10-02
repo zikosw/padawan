@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors on Padawan journey</title>
+    <link>https://padawan.tech/authors/</link>
+    <description>Recent content in Authors on Padawan journey</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>th-th</language>
+    <copyright>Jedi Z</copyright>
+    <lastBuildDate>Sun, 02 Oct 2016 01:35:21 +0700</lastBuildDate>
+    <atom:link href="https://padawan.tech/authors/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>ziko</title>
+      <link>https://padawan.tech/authors/ziko/</link>
+      <pubDate>Sun, 02 Oct 2016 01:35:21 +0700</pubDate>
+      
+      <guid>https://padawan.tech/authors/ziko/</guid>
+      <description>&lt;p&gt;Ziko : Hello&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

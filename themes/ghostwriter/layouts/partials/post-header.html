@@ -5,18 +5,21 @@
     {{ end }}
     <p class="post-date">
         <span>Published <time datetime="{{ .Date.Format "2006-01-02" }}" itemprop="datePublished">{{ .Date.Format "Mon, Jan 2, 2006" }}</time></span>
+    {{ if .Params.author }}
         <span>by</span>
         <span itemscope="" itemprop="author" itemtype="http://schema.org/Person">
             <span itemprop="name">
-                <a href="{{ .Site.Author.profile }}" itemprop="url" rel="author">{{ .Site.Author.name }}</a>
+                <a href="/authors/{{ .Params.author}}" itemprop="url" rel="author">{{ .Params.author }}</a>
             </span>
         </span>
+    {{ end }}
     </p>
+
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- padawan.tech-header -->
-    <ins class="adsbygoogle"
-     		style="display:inline-block;width:728px;height:90px"
-     		data-ad-client="ca-pub-6790702287470373"
-     		data-ad-slot="4471144903"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    <!-- <ins class="adsbygoogle" -->
+    <!--  		style="display:inline-block;width:728px;height:90px" -->
+    <!--  		data-ad-client="ca-pub-6790702287470373" -->
+    <!--  		data-ad-slot="4471144903"></ins> -->
+    <!-- <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> -->
 </header>

@@ -7,7 +7,7 @@ title = "Haskell 101.01 Get Started!"
 
 +++
 
-ในวงการโปรแกรมเมอร์ทุกวันนี้ เพื่อนๆpadawanน่าจะเคยได้ยินเรื่องเกี่ยวกับ functional programming ซึ่งเป็นเทรนด์ที่กำลังมาแรงในปัจจุบัน ทำให้ผมอยากลองเล่นภาษาที่เป็น pure functional programming language และภาษาที่ผมเลือกจะศึกษาก็คือ Haskell นั่นเอง
+ในวงการโปรแกรมเมอร์ทุกวันนี้ เพื่อนๆ padawan น่าจะเคยได้ยินเรื่องเกี่ยวกับ functional programming ซึ่งเป็นเทรนด์ที่กำลังมาแรงในปัจจุบัน ทำให้ผมอยากลองเล่นภาษาที่เป็น pure functional programming language และภาษาที่ผมเลือกจะศึกษาก็คือ Haskell นั่นเอง
 สำหรับภาษา Haskell นี้ผมคิดว่าจะทำเขียนเป็นซีรี่ย์ต่อกันไปเรื่อยๆ เพื่อที่ผมกับเพื่อนๆpadawanจะได้เรียนรู้ไปด้วยกัน
 ในตอนแรกนี้ผมจะพาเพื่อนๆมาทำความรู้จัก ติดตั้ง และลองเขียน hello world ในภาษา Haskell กัน
 
@@ -16,7 +16,7 @@ title = "Haskell 101.01 Get Started!"
 โดยเวอร์ชันแรกของภาษา Haskell ได้ออกมาในปี 1990 และเติบโตอย่างรวดเร็วผ่าน community open source อย่าง GHC (Glasgow Haskell Compiler)
 
 # การติดตั้ง
-ภาษา Haskell ได้สนับสนุนการใช้งานในหลากหลายระบบปฏิบัติการ ทั้งใน Linux, Mac OS และ Windows โดยการติดตั้ง Compiler ภาษา Haskell นั้นจะมีเลือกติดตั้งได้ทั้งแบบ minimal ที่จะมีเพียงlibraryพื้นฐาน หรือแบบ Haskell Platform ที่จะมีการติดตั้งlibraryอื่นๆเพิ่มเติมมาด้วย
+ภาษา Haskell ได้สนับสนุนการใช้งานในหลากหลายระบบปฏิบัติการ ทั้งใน Linux, Mac OS และ Windows โดยการติดตั้ง Compiler ภาษา Haskell นั้นจะมีเลือกติดตั้งได้ทั้งแบบ minimal ที่จะมีเพียง library พื้นฐาน หรือแบบ Haskell Platform ที่จะมีการติดตั้ง library อื่นๆเพิ่มเติมมาด้วย
 โดยในที่นี้ จะขอยกตัวอย่างการติดตั้งเฉพาะแบบ Haskell Platform ใน Ubuntu และ Mac OS เท่านั้น
 
 Ubuntu

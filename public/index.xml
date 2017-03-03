@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Padawan journey</title>
-    <link>https://padawan.tech/</link>
+    <link>https://padawan.tech/index.xml</link>
     <description>Recent content on Padawan journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>th-th</language>
@@ -81,6 +81,65 @@
       
       <guid>https://padawan.tech/authors/ziko/</guid>
       <description>&lt;p&gt;Ziko : Hello&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>React - Getting Started</title>
+      <link>https://padawan.tech/2016/09/15/react-0/</link>
+      <pubDate>Thu, 15 Sep 2016 22:51:12 +0700</pubDate>
+      
+      <guid>https://padawan.tech/2016/09/15/react-0/</guid>
+      <description>
+
+&lt;h1 id=&#34;react-ค-ออะไร&#34;&gt;React คืออะไร&lt;/h1&gt;
+
+&lt;p&gt;React ก็คือจาวาสคริปต์ไลบรารีสำหรับสร้างส่วนติดต่อกับผู้ใช้ ว่าง่ายๆก็คือตัวหน้าเว็บนั่นเอง
+โดยที่ React มีจุดเด่นอยู่ 3 ข้อหลักๆ คือ&lt;br /&gt;
+1.  Declarative&lt;br /&gt;
+2.  Component-Based&lt;br /&gt;
+3.  Learn Once, Wrtie Anywhere&lt;/p&gt;
+
+&lt;h1 id=&#34;install&#34;&gt;Install&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;npm install -g create-react-app
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;start&#34;&gt;Start&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;create-react-app my-react-app
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd my-react-app
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ls
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;npm start
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;basic&#34;&gt;Basic&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Component&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Render&lt;br /&gt;
+&amp;ndash;  JSX  &amp;amp; Single element&lt;br /&gt;
+&amp;mdash;  className, htmlFor
+&amp;ndash;  props&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;what-in-next-article&#34;&gt;What in next article&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;state&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;further&#34;&gt;Further&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ES6/7&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     

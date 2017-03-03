@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Posts &middot; Jedi</title>
+        <title>React - Getting Started &middot; Jedi</title>
         <meta name="description" content="In order to be the best jedi you can be, your tools  must be sharp">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
@@ -79,59 +79,133 @@ ga('send', 'pageview');
             <div id="container">
 
 
-<div id="post-index" class="container">
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">React - Getting Started</h1>
     
-    <header class="post-header">
-        <h1 class="post-title">Road to Jedi Master</h1>
-        <p>In order to be the best jedi you can be, your tools  must be sharp</p>
-    </header>
+    <p class="post-date">
+        <span>Published <time datetime="2016-09-15" itemprop="datePublished">Thu, Sep 15, 2016</time></span>
+    
+        <span>by</span>
+        <span itemscope="" itemprop="author" itemtype="http://schema.org/Person">
+            <span itemprop="name">
+                <a href="/authors/ziko" itemprop="url" rel="author">ziko</a>
+            </span>
+        </span>
+    
+    </p>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
+    
+    
+    
+    
+    
+</header>
 
 
-    <ol class="post-list">
-        
-        
-            <li class="post-stub">
-    <a href="https://padawan.tech/2016/10/02/haskell-01/">
-        <h4 class="post-stub-title">Haskell 101.01 Get Started!</h4>
-        
-            <p class="post-stub-description">ทำความรู้จักกับภาษา Haskell</p>
-        
-        
-    </a>
-</li>
-        
-            <li class="post-stub">
-    <a href="https://padawan.tech/2016/09/15/react-0/">
-        <h4 class="post-stub-title">React - Getting Started</h4>
-        
-        
-    </a>
-</li>
-        
-            <li class="post-stub">
-    <a href="https://padawan.tech/2016/09/15/vim/">
-        <h4 class="post-stub-title">Vim Survivor</h4>
-        
-            <p class="post-stub-description">เข้าใจพื้นฐานของ Vim และวิธีการใช้งานเบื้องต้น</p>
-        
-        
-    </a>
-</li>
-        
-            <li class="post-stub">
-    <a href="https://padawan.tech/2016/09/09/welcome/">
-        <h4 class="post-stub-title">welcome</h4>
-        
-        
-    </a>
-</li>
-        
-    </ol>
+        <div class="post-content clearfix" itemprop="articleBody">
+    
 
-    <div class="post-navigation">
-        
+    
 
+<h1 id="react-ค-ออะไร">React คืออะไร</h1>
+
+<p>React ก็คือจาวาสคริปต์ไลบรารีสำหรับสร้างส่วนติดต่อกับผู้ใช้ ว่าง่ายๆก็คือตัวหน้าเว็บนั่นเอง
+โดยที่ React มีจุดเด่นอยู่ 3 ข้อหลักๆ คือ<br />
+1.  Declarative<br />
+2.  Component-Based<br />
+3.  Learn Once, Wrtie Anywhere</p>
+
+<h1 id="install">Install</h1>
+
+<pre><code class="language-bash">npm install -g create-react-app
+</code></pre>
+
+<h1 id="start">Start</h1>
+
+<pre><code class="language-bash">create-react-app my-react-app
+</code></pre>
+
+<pre><code class="language-bash">cd my-react-app
+</code></pre>
+
+<pre><code class="language-bash">ls
+</code></pre>
+
+<pre><code class="language-bash">npm start
+</code></pre>
+
+<h1 id="basic">Basic</h1>
+
+<ul>
+<li>Component<br /></li>
+<li>Render<br />
+&ndash;  JSX  &amp; Single element<br />
+&mdash;  className, htmlFor
+&ndash;  props</li>
+</ul>
+
+<h1 id="what-in-next-article">What in next article</h1>
+
+<ul>
+<li>state</li>
+</ul>
+
+<h1 id="further">Further</h1>
+
+<ul>
+<li>ES6/7</li>
+</ul>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+
+    <div class="share">
+        <a class="icon-twitter" href="http://twitter.com/share?text=React%20-%20Getting%20Started&url=https%3a%2f%2fpadawan.tech%2f2016%2f09%2f15%2freact-0%2f"
+            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+            <i class="fa fa-twitter"></i>
+            <span class="hidden">Twitter</span>
+        </a>
+
+        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fpadawan.tech%2f2016%2f09%2f15%2freact-0%2f"
+            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+            <i class="fa fa-facebook"></i>
+            <span class="hidden">Facebook</span>
+        </a>
+
+        <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fpadawan.tech%2f2016%2f09%2f15%2freact-0%2f"
+           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+           <i class="fa fa-google-plus"></i>
+            <span class="hidden">Google+</span>
+        </a>
     </div>
+</footer>
+
+        
+    <div class="comments">
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'padawantech';
+    var disqus_identifier = 'https:\/\/padawan.tech\/2016\/09\/15\/react-0\/';
+    var disqus_title = 'React - Getting Started';
+    var disqus_url = 'https:\/\/padawan.tech\/2016\/09\/15\/react-0\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+    </article>
 </div>
 
             </div>
@@ -164,3 +238,4 @@ ga('send', 'pageview');
         <script src="https://padawan.tech/js/scripts.js"></script>
     </body>
 </html>
+

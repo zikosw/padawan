@@ -2,7 +2,7 @@
 title = "NodeJs Hello World ด้วย ClojureScript"
 tags = ["nodejs","cljs"]
 date = "2017-03-04T11:01:32+07:00"
-author = ""
+author = "ziko"
 description = ""
 
 +++

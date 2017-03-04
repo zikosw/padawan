@@ -5,7 +5,7 @@
     <link>https://padawan.tech/index.xml</link>
     <description>Recent content on Padawan journey</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>th-th</language>
+    <language>en-US</language>
     <copyright>Jedi Z</copyright>
     <lastBuildDate>Sat, 04 Mar 2017 11:01:32 +0700</lastBuildDate>
     <atom:link href="https://padawan.tech/index.xml" rel="self" type="application/rss+xml" />
@@ -97,15 +97,6 @@ Hello world! from ClojureScript
     </item>
     
     <item>
-      <title>sonk</title>
-      <link>https://padawan.tech/authors/sonk/</link>
-      <pubDate>Sun, 02 Oct 2016 12:17:41 +0700</pubDate>
-      
-      <guid>https://padawan.tech/authors/sonk/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Haskell 101.01 Get Started!</title>
       <link>https://padawan.tech/2016/10/02/haskell-01/</link>
       <pubDate>Sun, 02 Oct 2016 02:02:28 +0700</pubDate>
@@ -157,16 +148,6 @@ Hello world! from ClojureScript
 &lt;li&gt;หนังสือ &lt;a href=&#34;http:http://learnyouahaskell.com/&#34;&gt;Learn you a Haskell for Great Good!&lt;/a&gt; โดยหนังสือจะฟรีในเวอร์ชันอ่านออนไลน์&lt;/li&gt;
 &lt;li&gt;คอร์ส &lt;a href=&#34;https://www.edx.org/course/introduction-functional-programming-delftx-fp101x-0&#34;&gt;Introduction to Functional Programming&lt;/a&gt; โดยหลักๆแล้วเนื้อหาคอร์สนี้จะเกี่ยวกับ functional programming โดยผู้สอนจะใช้ภาษา Haskell ซึ่งเป็น pure functional programming language ในการสอน โดยการเรียนนั้นไม่มีค่าใช้จ่ายใดๆ จะเสียเงินเมื่อต้องการซื้อ Certificate ของคอร์สเท่านั้น&lt;br /&gt;&lt;/li&gt;
 &lt;/ol&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>ziko</title>
-      <link>https://padawan.tech/authors/ziko/</link>
-      <pubDate>Sun, 02 Oct 2016 01:35:21 +0700</pubDate>
-      
-      <guid>https://padawan.tech/authors/ziko/</guid>
-      <description>&lt;p&gt;Ziko : Hello&lt;/p&gt;
 </description>
     </item>
     
@@ -254,6 +235,27 @@ Hello world! from ClojureScript
       
       <guid>https://padawan.tech/2016/09/09/welcome/</guid>
       <description>&lt;p&gt;Welcome every Padawan!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>sonk</title>
+      <link>https://padawan.tech/authors/sonk/</link>
+      <pubDate>Tue, 02 Aug 2016 12:17:41 +0700</pubDate>
+      
+      <guid>https://padawan.tech/authors/sonk/</guid>
+      <description>&lt;p&gt;Nothing in here yet&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ziko</title>
+      <link>https://padawan.tech/authors/ziko/</link>
+      <pubDate>Tue, 02 Aug 2016 01:35:21 +0700</pubDate>
+      
+      <guid>https://padawan.tech/authors/ziko/</guid>
+      <description>&lt;p&gt;Ziko : Hello&lt;br /&gt;
+few things about &lt;a href=&#34;https://github.com/jigkoxsee&#34;&gt;me&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

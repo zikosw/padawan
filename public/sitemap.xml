@@ -7,18 +7,8 @@
   </url>
   
   <url>
-    <loc>https://padawan.tech/authors/sonk/</loc>
-    <lastmod>2016-10-02T12:17:41+07:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://padawan.tech/2016/10/02/haskell-01/</loc>
     <lastmod>2016-10-02T02:02:28+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://padawan.tech/authors/ziko/</loc>
-    <lastmod>2016-10-02T01:35:21+07:00</lastmod>
   </url>
   
   <url>
@@ -32,8 +22,18 @@
   </url>
   
   <url>
+    <loc>https://padawan.tech/authors/sonk/</loc>
+    <lastmod>2016-08-02T12:17:41+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://padawan.tech/authors/ziko/</loc>
+    <lastmod>2016-08-02T01:35:21+07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://padawan.tech/authors/</loc>
-    <lastmod>2016-10-02T12:17:41+07:00</lastmod>
+    <lastmod>2016-08-02T12:17:41+07:00</lastmod>
     <priority>0</priority>
   </url>
   

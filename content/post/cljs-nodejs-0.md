@@ -17,8 +17,8 @@ Functional programming ภาษาหนึ่ง โดยที่มี Synt
 
 
 # สิ่งที่ต้องมี
- - Node runtime
- - JDK สำหรับรัน Clojure [ซึ่งดาวน์โหลดได้จากที่นี่](http://www.oracle.com/technetwork/java/javase/downloads/index.html)  
+ - NodeJs runtime [ดาวน์โหลดได้จากที่นี่](https://nodejs.org/en/download/)
+ - JDK สำหรับรัน Clojure [ดาวน์โหลดได้จากที่นี่](http://www.oracle.com/technetwork/java/javase/downloads/index.html)  
  - Leiningen เป็น Build tools สำหรับ Clojure [ดาวน์โหลดได้จากที่นี่](https://leiningen.org/)  
 
 ```

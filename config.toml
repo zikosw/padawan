@@ -6,17 +6,17 @@ copyright = "Jedi Z"
 googleAnalytics = "UA-84195554-1"
 disqusShortname = "padawantech"
 
-[Author]
-    name = "Jedi"
-    profile = "https://google.com/+XXX"
+#[Author]
+#    name = "Jedi"
+#    profile = "https://google.com/+XXX"
 
 [Taxonomies]
     tag = "tags"
 
 [Params]
     intro = true
-    headline = "Road to Jedi Master"
-    description = "In order to be the best jedi you can be, your tools  must be sharp"
+    headline = "Road to whatever..."
+    description = "In order to be the best ... you can be, your tools  must be sharp"
     github = "https://github.com/#"
     linkedin = "https://linkedin.com/in/#/"
     gplus = "https://google.com/+#"

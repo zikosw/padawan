@@ -14,12 +14,16 @@
 <article>
     {{ .Content }}
 </article>
-<ins class="adsbygoogle" 
-    style="display:inline-block;width:728px;height:90px"
-    data-ad-client="ca-pub-6790702287470373"
-    data-ad-slot="4471144903">
-</ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-{{ template "_internal/disqus.html" . }}
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6790702287470373";
+    google_ad_slot = "4471144903";
+    google_ad_width = 728;
+    google_ad_height = 90;
+</script>
+<!-- padawan.tech-header -->
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
 
+{{ template "_internal/disqus.html" . }}
 {{ partial "bottom.html" . }}

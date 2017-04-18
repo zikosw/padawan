@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cljs on Padawan journey</title>
-    <link>https://padawan.tech/tags/cljs/index.xml</link>
+    <link>https://padawan.tech/tags/cljs/</link>
     <description>Recent content in Cljs on Padawan journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Jedi Z</copyright>
-    <atom:link href="https://padawan.tech/tags/cljs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 04 Mar 2017 11:01:32 +0700</lastBuildDate>
+    
+	<atom:link href="https://padawan.tech/tags/cljs/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>NodeJs Hello World ด้วย ClojureScript</title>
@@ -15,84 +18,12 @@
       <pubDate>Sat, 04 Mar 2017 11:01:32 +0700</pubDate>
       
       <guid>https://padawan.tech/2017/03/04/cljs-nodejs-0/</guid>
-      <description>
-
-&lt;p&gt;สิ่งที่จะทำวันนี้ก็คือเขียนเริ่มต้น Nodejs application ด้วย ClojureScript, แล้วทำไมต้องเป็น ClojureScript? งั้นไปรู้จักกับ ClojureScript แบบคร่าวๆ กันก่อน&lt;/p&gt;
-
-&lt;h2 id=&#34;clojurescript-https-clojurescript-org-ค-อ&#34;&gt;&lt;a href=&#34;https://clojurescript.org/&#34;&gt;ClojureScript&lt;/a&gt; คือ ?&lt;/h2&gt;
-
-&lt;p&gt;คอมไพเลอร์สำหรับภาษา Clojure ที่ คอมไพล์โค้ดจาก Clojure ไปเป็นโค้ด JavaScript&lt;/p&gt;
-
-&lt;h2 id=&#34;clojure-https-en-wikipedia-org-wiki-clojure-ค-อ&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Clojure&#34;&gt;Clojure&lt;/a&gt; คือ ?&lt;/h2&gt;
-
-&lt;p&gt;Functional programming ภาษาหนึ่ง โดยที่มี Syntax เหมือนกับภาษา &lt;a href=&#34;https://en.wikipedia.org/wiki/Lisp_(programming_language)&#34;&gt;Lisp&lt;/a&gt; ซึ่งเจ้า Clojure นี่แหล่ะมีสิ่งที่น่าสนใจอยู่หลายอย่างเลยทีเดียว แต่ในที่นี้จะขอข้ามไปก่อน 🤣&lt;/p&gt;
-
-&lt;h1 id=&#34;ส-งท-ต-องม&#34;&gt;สิ่งที่ต้องมี&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;NodeJs runtime &lt;a href=&#34;https://nodejs.org/en/download/&#34;&gt;ดาวน์โหลดได้จากที่นี่&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;JDK สำหรับรัน Clojure &lt;a href=&#34;http://www.oracle.com/technetwork/java/javase/downloads/index.html&#34;&gt;ดาวน์โหลดได้จากที่นี่&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Leiningen เป็น Build tools สำหรับ Clojure &lt;a href=&#34;https://leiningen.org/&#34;&gt;ดาวน์โหลดได้จากที่นี่&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code&gt;    # สำหรับ Mac สามารถลงได้โดยใช้คำสั่งนี้
-    brew install leiningen
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&#34;เร-มก-นเลย&#34;&gt;เริ่มกันเลย&lt;/h1&gt;
-
-&lt;p&gt;1.สร้างโปรเจ็คต์ ในที่นี่จะใช้ชื่อว่า demo, ด้วยคำสั่ง &lt;code&gt;lein new app demo&lt;/code&gt;  จะได้โฟลเดอร์แบบนี้&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;./
-└── demo
-    ├── CHANGELOG.md
-    ├── LICENSE
-    ├── README.md
-    ├── doc
-    │   └── intro.md
-    ├── project.clj
-    ├── resources
-    ├── src
-    │   └── demo
-    │       └── core.clj
-    └── test
-        └── demo
-            └── core_test.clj
-
-7 directories, 7 files
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;2.แก้ชื่อไฟล์ &lt;code&gt;src/demo/core.clj&lt;/code&gt; เป็น &lt;code&gt;core.cljs&lt;/code&gt; แล้วใส้โค้ด Hello World ของเราลงไป
-&lt;script src=&#34;//gist.github.com/jigkoxsee/2a114cf4641d689fdfe377ec6bb2eab6.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;3.ต่อไปคือการ Build โปรเจ็กต์ ซึ่งต้องมีการตั้งค่ากันสักเล็กน้อย เริ่มต้นด้วยการใส่ &lt;code&gt;[org.clojure/clojurescript &amp;quot;1.9.473&amp;quot;]&lt;/code&gt; ลงไปใน Dependency lists ของโปรเจ็กต์ที่ไฟล์ &lt;code&gt;project.clj&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;4.ลงปลั้กอิน &lt;code&gt;lein-cljsbuild&lt;/code&gt; โดยใส่ &lt;code&gt;:plugins [[lein-cljsbuild &amp;quot;1.1.5&amp;quot;]]&lt;/code&gt; ลงไปในไฟล์ &lt;code&gt;project.clj&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;5.ตั้งค่าการ Build ClojureScript โดยการใส่เซ็กชัน &lt;code&gt;:cljsbuild&lt;/code&gt; ลงไปในไฟล์ &lt;code&gt;project.clj&lt;/code&gt;&lt;br /&gt;
-สุดท้ายแล้วจะได้ไฟล์หน้าตาประมาณนี้&lt;br /&gt;
-&lt;script src=&#34;//gist.github.com/jigkoxsee/02220b056cb2e266e2722a49349986e4.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;6.Build โดยใช้คำสั่ง &lt;code&gt;lein cljsbuild once&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ lein cljsbuild once
-Compiling ClojureScript...
-Compiling &amp;quot;out/main.js&amp;quot; from [&amp;quot;src&amp;quot;]...
-Successfully compiled &amp;quot;out/main.js&amp;quot; in 14.002 seconds.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;7.ทดลองรันโค้ดที่ได้ด้วย node ด้วยคำสั่งนี้ &lt;code&gt;node out/main.js&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ node out/main.js
-Hello world! from ClojureScript
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&#34;ป-ดท-าย&#34;&gt;ปิดท้าย&lt;/h1&gt;
-
-&lt;p&gt;หลายๆคนอาจจะตกใจหนีหายไปก่อนจะอ่านถึงตรงนี้ สำหรับคนที่อ่านถึงอาจจะสงสัยว่าทำไมหลายขั้นตอนจัง ClojureScript มันยุ่งยากขนึ้นี้เลยหรอ จริงๆแล้วขึ้นอยู๋กับว่าเราจะทำอะไร ซึ่งถ้าต้องการเขียน ClojureScript เพื่อทำ Frontend dev เนี่ย ง่ายมากๆ แค่ &lt;code&gt;lein new figwheel demo&lt;/code&gt; ก็ได้โปรเจ็กต์ที่พร้อมสำหรับการเขียนแล้วการ build แล้ว&lt;br /&gt;
-แต่ถ้าเพื่อไปรันบน nodejs เนี่ย ก็ได้มีคนทำ &lt;a href=&#34;https://github.com/honza/cljs-node&#34;&gt;lein template&lt;/a&gt; ไว้แล้ว จริงๆแค่ &lt;code&gt;lein new cljs-node demo&lt;/code&gt; ก็ได้โปรเจ็กต์พร้อมใช้แล้วแล่ะ แต่ทว่า lein template ตัวนี้มันไม่ update มาหลายปีแล้ว 😅&lt;br /&gt;
-ในที่นี้ผมเลยใช้วิธีการสร้างโปรเจ็กต์เองตั้งแต่ต้น ซึ่งวิธีการที่ผมใช้นี้ถ้าดัดแปลงเพียงเล็กน้อยก็จะสามารถทำให้เราเขียน Node module แล้วเอาไปใช้ร่วมกับโค้ด Nodejs เดิมได้ไม่ยาก 😎&lt;/p&gt;
-</description>
+      <description>สิ่งที่จะทำวันนี้ก็คือเขียนเริ่มต้น Nodejs application ด้วย ClojureScript, แล้วทำไมต้องเป็น ClojureScript? งั้นไปรู้จักกับ ClojureScript แบบคร่าวๆ กันก่อน
+ClojureScript คือ ? คอมไพเลอร์สำหรับภาษา Clojure ที่ คอมไพล์โค้ดจาก Clojure ไปเป็นโค้ด JavaScript
+Clojure คือ ? Functional programming ภาษาหนึ่ง โดยที่มี Syntax เหมือนกับภาษา Lisp ซึ่งเจ้า Clojure นี่แหล่ะมีสิ่งที่น่าสนใจอยู่หลายอย่างเลยทีเดียว แต่ในที่นี้จะขอข้ามไปก่อน 🤣
+สิ่งที่ต้องมี  NodeJs runtime ดาวน์โหลดได้จากที่นี่ JDK สำหรับรัน Clojure ดาวน์โหลดได้จากที่นี่
+ Leiningen เป็น Build tools สำหรับ Clojure ดาวน์โหลดได้จากที่นี่
+   # สำหรับ Mac สามารถลงได้โดยใช้คำสั่งนี้ brew install leiningen  เริ่มกันเลย 1.สร้างโปรเจ็คต์ ในที่นี่จะใช้ชื่อว่า demo, ด้วยคำสั่ง lein new app demo จะได้โฟลเดอร์แบบนี้</description>
     </item>
     
   </channel>

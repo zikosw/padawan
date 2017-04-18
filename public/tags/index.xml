@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Padawan journey</title>
+    <link>https://padawan.tech/tags/</link>
+    <description>Recent content in Tags on Padawan journey</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Jedi Z</copyright>
+    <lastBuildDate>Sat, 04 Mar 2017 11:01:32 +0700</lastBuildDate>
+    
+	<atom:link href="https://padawan.tech/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cljs</title>
+      <link>https://padawan.tech/tags/cljs/</link>
+      <pubDate>Sat, 04 Mar 2017 11:01:32 +0700</pubDate>
+      
+      <guid>https://padawan.tech/tags/cljs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Clojurescript</title>
+      <link>https://padawan.tech/tags/clojurescript/</link>
+      <pubDate>Sat, 18 Mar 2017 20:30:00 +0700</pubDate>
+      
+      <guid>https://padawan.tech/tags/clojurescript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Essential</title>
+      <link>https://padawan.tech/tags/essential/</link>
+      <pubDate>Thu, 15 Sep 2016 22:48:45 +0700</pubDate>
+      
+      <guid>https://padawan.tech/tags/essential/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Functional Programming</title>
+      <link>https://padawan.tech/tags/functional-programming/</link>
+      <pubDate>Sun, 02 Oct 2016 02:02:28 +0700</pubDate>
+      
+      <guid>https://padawan.tech/tags/functional-programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Haskell</title>
+      <link>https://padawan.tech/tags/haskell/</link>
+      <pubDate>Sun, 02 Oct 2016 02:02:28 +0700</pubDate>
+      
+      <guid>https://padawan.tech/tags/haskell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nodejs</title>
+      <link>https://padawan.tech/tags/nodejs/</link>
+      <pubDate>Sat, 04 Mar 2017 11:01:32 +0700</pubDate>
+      
+      <guid>https://padawan.tech/tags/nodejs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Programming Language</title>
+      <link>https://padawan.tech/tags/programming-language/</link>
+      <pubDate>Sun, 02 Oct 2016 02:02:28 +0700</pubDate>
+      
+      <guid>https://padawan.tech/tags/programming-language/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Re Frame</title>
+      <link>https://padawan.tech/tags/re-frame/</link>
+      <pubDate>Sat, 18 Mar 2017 20:30:00 +0700</pubDate>
+      
+      <guid>https://padawan.tech/tags/re-frame/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>React Native</title>
+      <link>https://padawan.tech/tags/react-native/</link>
+      <pubDate>Sat, 18 Mar 2017 20:30:00 +0700</pubDate>
+      
+      <guid>https://padawan.tech/tags/react-native/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reagent</title>
+      <link>https://padawan.tech/tags/reagent/</link>
+      <pubDate>Sat, 18 Mar 2017 20:30:00 +0700</pubDate>
+      
+      <guid>https://padawan.tech/tags/reagent/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vim</title>
+      <link>https://padawan.tech/tags/vim/</link>
+      <pubDate>Thu, 15 Sep 2016 22:48:45 +0700</pubDate>
+      
+      <guid>https://padawan.tech/tags/vim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vim ออกยังไง</title>
+      <link>https://padawan.tech/tags/vim-%E0%B8%AD%E0%B8%AD%E0%B8%81%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B9%84%E0%B8%87/</link>
+      <pubDate>Thu, 15 Sep 2016 22:48:45 +0700</pubDate>
+      
+      <guid>https://padawan.tech/tags/vim-%E0%B8%AD%E0%B8%AD%E0%B8%81%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B9%84%E0%B8%87/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vim เซฟยังไง</title>
+      <link>https://padawan.tech/tags/vim-%E0%B9%80%E0%B8%8B%E0%B8%9F%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B9%84%E0%B8%87/</link>
+      <pubDate>Thu, 15 Sep 2016 22:48:45 +0700</pubDate>
+      
+      <guid>https://padawan.tech/tags/vim-%E0%B9%80%E0%B8%8B%E0%B8%9F%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B9%84%E0%B8%87/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vim ใช้ยังไง</title>
+      <link>https://padawan.tech/tags/vim-%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B9%84%E0%B8%87/</link>
+      <pubDate>Thu, 15 Sep 2016 22:48:45 +0700</pubDate>
+      
+      <guid>https://padawan.tech/tags/vim-%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B9%84%E0%B8%87/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

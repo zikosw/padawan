@@ -2,13 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors on Padawan journey</title>
-    <link>https://padawan.tech/authors/index.xml</link>
+    <link>https://padawan.tech/authors/</link>
     <description>Recent content in Authors on Padawan journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Jedi Z</copyright>
     <lastBuildDate>Tue, 02 Aug 2016 12:17:41 +0700</lastBuildDate>
-    <atom:link href="https://padawan.tech/authors/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://padawan.tech/authors/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>sonk</title>
@@ -16,8 +18,7 @@
       <pubDate>Tue, 02 Aug 2016 12:17:41 +0700</pubDate>
       
       <guid>https://padawan.tech/authors/sonk/</guid>
-      <description>&lt;p&gt;Nothing in here yet&lt;/p&gt;
-</description>
+      <description>Nothing in here yet</description>
     </item>
     
     <item>
@@ -26,9 +27,8 @@
       <pubDate>Tue, 02 Aug 2016 01:35:21 +0700</pubDate>
       
       <guid>https://padawan.tech/authors/ziko/</guid>
-      <description>&lt;p&gt;Ziko : Hello&lt;br /&gt;
-few things about &lt;a href=&#34;https://github.com/jigkoxsee&#34;&gt;me&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Ziko : Hello
+few things about me</description>
     </item>
     
   </channel>

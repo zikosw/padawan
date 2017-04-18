@@ -2,12 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Programming Language on Padawan journey</title>
-    <link>https://padawan.tech/tags/programming-language/index.xml</link>
+    <link>https://padawan.tech/tags/programming-language/</link>
     <description>Recent content in Programming Language on Padawan journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Jedi Z</copyright>
-    <atom:link href="https://padawan.tech/tags/programming-language/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Oct 2016 02:02:28 +0700</lastBuildDate>
+    
+	<atom:link href="https://padawan.tech/tags/programming-language/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Haskell 101.01 Get Started!</title>
@@ -15,53 +18,10 @@
       <pubDate>Sun, 02 Oct 2016 02:02:28 +0700</pubDate>
       
       <guid>https://padawan.tech/2016/10/02/haskell-01/</guid>
-      <description>
-
-&lt;p&gt;ในวงการโปรแกรมเมอร์ทุกวันนี้ เพื่อนๆ padawan น่าจะเคยได้ยินเรื่องเกี่ยวกับ functional programming ซึ่งเป็นเทรนด์ที่กำลังมาแรงในปัจจุบัน ทำให้ผมอยากลองเล่นภาษาที่เป็น pure functional programming language และภาษาที่ผมเลือกจะศึกษาก็คือ Haskell นั่นเอง
-สำหรับภาษา Haskell นี้ ผมตั้งใจจะทำเขียนเป็นซีรี่ย์ต่อกันไปเรื่อยๆ เพื่อที่ผมกับเพื่อนๆจะได้เรียนรู้ไปด้วยกัน&lt;/p&gt;
-
-&lt;p&gt;ในตอนแรกของซีรี่ย์นี้ ผมจะพาเพื่อนๆมาทำความรู้จัก ติดตั้ง และลองเขียน hello world ในภาษา Haskell กัน&lt;/p&gt;
-
-&lt;h1 id=&#34;ร-จ-กก-บ-haskell&#34;&gt;รู้จักกับ Haskell&lt;/h1&gt;
-
-&lt;p&gt;ภาษา Haskell เป็น pure functional programming language โดยมี type system เป็น strong static typing
-โดยเวอร์ชันแรกของภาษา Haskell ได้ออกมาในปี 1990 และเติบโตอย่างรวดเร็วผ่าน community open source อย่าง GHC (Glasgow Haskell Compiler)&lt;/p&gt;
-
-&lt;h1 id=&#34;การต-ดต-ง&#34;&gt;การติดตั้ง&lt;/h1&gt;
-
-&lt;p&gt;ภาษา Haskell ได้สนับสนุนการใช้งานในหลากหลายระบบปฏิบัติการ ทั้งใน Linux, Mac OS และ Windows โดยการติดตั้ง Compiler ภาษา Haskell นั้นจะมีเลือกติดตั้งได้ทั้งแบบ minimal ที่จะมีเพียง library พื้นฐาน หรือแบบ Haskell Platform ที่จะมีการติดตั้ง library อื่นๆเพิ่มเติมมาด้วย
-โดยในที่นี้ จะขอยกตัวอย่างการติดตั้งเฉพาะแบบ Haskell Platform ใน Ubuntu และ Mac OS เท่านั้น&lt;/p&gt;
-
-&lt;p&gt;Ubuntu&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  $ sudo apt-get install haskell-platform
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Mac OS&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  $ brew cask install haskell-platform
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&#34;hello-world-i-m-haskell&#34;&gt;Hello, World !! I&amp;rsquo;m Haskell.&lt;/h1&gt;
-
-&lt;p&gt;หลังจากที่ได้ติดตั้ง Haskell Platform แล้ว เราก็จะเริ่มเขียน Haskell ด้วยกัน โดย Haskell Platform ก็จะมี Interpreter อย่าง GHCi(Glasgow Haskell Compiler Interactive) ติดมาด้วย ซึ่งจะทำให้เราสามารถเริ่มเขียน Haskell ผ่าน Terminal ได้ทันทีเลย&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://padawan.tech/img/haskell/haskell-01-1.png&#34; alt=&#34;hello-world-0&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;หลังจากนั้น shell ของเพื่อนๆก็จะกลายเป็น Prelude ซึ่งเป็น module ที่รวบรวม standard library ของภาษา Haskell
-โดยคำสั่งที่เทียบเท่ากับการ print ของภาษาอื่นๆจะเป็น putStr หรือ putStrLn เพื่อที่จะขึ้นบรรทัดใหม่หลังข้อความที่ต้องการ print&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://padawan.tech/img/haskell/haskell-01-2.png&#34; alt=&#34;hello-world-1&#34; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;แหล-งไว-ศ-กษาเพ-มเต-ม&#34;&gt;แหล่งไว้ศึกษาเพิ่มเติม&lt;/h1&gt;
-
-&lt;p&gt;ในปัจจุบันภาษา Haskell มีแหล่งเรียนรู้มากมายที่ไม่ต้องเสียค่าใช้จ่าย ทั้งคอร์สเรียน หนังสือ ผมได้เลือกมาแนะนำเพื่อนๆ ดังนี้&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;หนังสือ &lt;a href=&#34;http:http://learnyouahaskell.com/&#34;&gt;Learn you a Haskell for Great Good!&lt;/a&gt; โดยหนังสือจะฟรีในเวอร์ชันอ่านออนไลน์&lt;/li&gt;
-&lt;li&gt;คอร์ส &lt;a href=&#34;https://www.edx.org/course/introduction-functional-programming-delftx-fp101x-0&#34;&gt;Introduction to Functional Programming&lt;/a&gt; โดยหลักๆแล้วเนื้อหาคอร์สนี้จะเกี่ยวกับ functional programming โดยผู้สอนจะใช้ภาษา Haskell ซึ่งเป็น pure functional programming language ในการสอน โดยการเรียนนั้นไม่มีค่าใช้จ่ายใดๆ จะเสียเงินเมื่อต้องการซื้อ Certificate ของคอร์สเท่านั้น&lt;br /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+      <description>ในวงการโปรแกรมเมอร์ทุกวันนี้ เพื่อนๆ padawan น่าจะเคยได้ยินเรื่องเกี่ยวกับ functional programming ซึ่งเป็นเทรนด์ที่กำลังมาแรงในปัจจุบัน ทำให้ผมอยากลองเล่นภาษาที่เป็น pure functional programming language และภาษาที่ผมเลือกจะศึกษาก็คือ Haskell นั่นเอง สำหรับภาษา Haskell นี้ ผมตั้งใจจะทำเขียนเป็นซีรี่ย์ต่อกันไปเรื่อยๆ เพื่อที่ผมกับเพื่อนๆจะได้เรียนรู้ไปด้วยกัน
+ในตอนแรกของซีรี่ย์นี้ ผมจะพาเพื่อนๆมาทำความรู้จัก ติดตั้ง และลองเขียน hello world ในภาษา Haskell กัน
+รู้จักกับ Haskell ภาษา Haskell เป็น pure functional programming language โดยมี type system เป็น strong static typing โดยเวอร์ชันแรกของภาษา Haskell ได้ออกมาในปี 1990 และเติบโตอย่างรวดเร็วผ่าน community open source อย่าง GHC (Glasgow Haskell Compiler)
+การติดตั้ง ภาษา Haskell ได้สนับสนุนการใช้งานในหลากหลายระบบปฏิบัติการ ทั้งใน Linux, Mac OS และ Windows โดยการติดตั้ง Compiler ภาษา Haskell นั้นจะมีเลือกติดตั้งได้ทั้งแบบ minimal ที่จะมีเพียง library พื้นฐาน หรือแบบ Haskell Platform ที่จะมีการติดตั้ง library อื่นๆเพิ่มเติมมาด้วย โดยในที่นี้ จะขอยกตัวอย่างการติดตั้งเฉพาะแบบ Haskell Platform ใน Ubuntu และ Mac OS เท่านั้น</description>
     </item>
     
   </channel>

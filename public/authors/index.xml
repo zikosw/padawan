@@ -28,7 +28,9 @@
       
       <guid>https://padawan.tech/authors/ziko/</guid>
       <description>Ziko : Hello
-few things about me</description>
+few things about me
+Disclaimer
+ ; I&#39;m new to ClojureScript. All of this base on my humble opnion ;)  </description>
     </item>
     
   </channel>

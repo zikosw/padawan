@@ -27,6 +27,8 @@
         <h3 data-open="last-posts">Padawan journey - Most recent posts</h3>
         <ul>
             
+            <li><a href="https://padawan.tech/2017/03/18/cljs-reactnative-reframe-en/">Create React Native app with ClojureScript</a></li>
+            
             <li><a href="https://padawan.tech/2017/03/18/cljs-reactnative-reframe/">เขียน React Native ด้วย ClojureScript และ re-frame</a></li>
             
             <li><a href="https://padawan.tech/2017/03/04/cljs-nodejs-0/">NodeJs Hello World ด้วย ClojureScript</a></li>
@@ -45,8 +47,6 @@
             
             <li><a href="https://padawan.tech/tags/cljs/">Cljs</a></li>
             
-            <li><a href="https://padawan.tech/tags/clojurescript/">Clojurescript</a></li>
-            
         </ul>
     </div>
 
@@ -60,6 +60,8 @@
             <li><a href="/tags/clojurescript">clojurescript</a></li>
             
             <li><a href="/tags/essential">essential</a></li>
+            
+            <li><a href="/tags/expo">expo</a></li>
             
             <li><a href="/tags/functional-programming">functional-programming</a></li>
             
@@ -145,11 +147,33 @@
 <p>เราจะสร้าง React Native โปรเจ็กท์ ที่ใช้ <a href="https://docs.expo.io/versions/v15.0.0/index.html">Expo</a> เพื่อความง่ายในการรันโปรเจ็กท์ขึ้นมา</p>
 
 <ol>
-<li>ติดตั้ง expo cli โดยใช้คำสั่ง <code>npm install -g exp</code><br /></li>
-<li>สร้างโปรเจ็กท์ โดยใช้คำสั่ง <code>lein new exponent mymobileapp</code> (<a href="https://docs.expo.io/versions/v15.0.0/guides/using-clojurescript.html">Expo tutorial</a>)<br /></li>
-<li>เข้าไปใน mymobileapp แล้วติดตั้ง node-modules ของ React Native และ Expo โดยใช้คำสั่ง <code>yarn</code> หรือ <code>npm install</code><br /></li>
+<li><p>ติดตั้ง expo cli โดยใช้คำสั่ง</p>
 
-<li><p>หลังจากนั้นทดสอบรันโปรเจ็กโดยการใช้คำสั่ง <code>exp start --android</code> หรือ <code>exp start --ios</code> ซึ่งจะได้ผลลัพธ์แบบนี้<br />
+<pre><code>npm install -g exp
+</code></pre></li>
+
+<li><p>สร้างโปรเจ็กท์ โดยใช้คำสั่ง</p>
+
+<pre><code>lein new exponent mymobileapp
+</code></pre>
+
+<p><a href="https://docs.expo.io/versions/v15.0.0/guides/using-clojurescript.html">Expo+Cljs tutorial</a></p></li>
+
+<li><p>เข้าไปใน mymobileapp แล้วติดตั้ง node-modules ของ React Native และ Expo โดยใช้คำสั่ง</p>
+
+<pre><code>yarn
+หรือ
+npm install
+</code></pre></li>
+
+<li><p>หลังจากนั้นทดสอบรันโปรเจ็กโดยการใช้คำสั่ง</p>
+
+<pre><code>exp start --android
+หรือ
+exp start --ios
+</code></pre>
+
+<p>ซึ่งจะได้ผลลัพธ์แบบนี้<br />
 <img src="/img/cljs/app0.png" alt="app0" /></p></li>
 
 <li><p>ที่มือถือให้ลงแอ็ปชื่อ <a href="https://expo.io/">Expo</a> แล้วลองสแกน QR Code ดู
@@ -214,7 +238,7 @@ add(1, 2)
 </code></pre></li>
 </ol>
 
-<p>จริงๆแล้วหากเราสามารถใส่ , ลงไประหว่างค่าแต่ละค่าได้ หากคิดว่าโค้ดอ่านยาก ซึ่งตัว ClojureScript compiler นั้นจะมองว่า , เหมือนกับเว้นวรรคเปล่าๆ</p>
+<p>จริงๆแล้วหากเราสามารถใส่ , ลงไประหว่างค่าแต่ละค่าได้ หากคิดว่าโค้ดอ่านยาก ซึ่งตัว ClojureScript compiler นั้นจะมองว่า , เหมือนกับการเว้นวรรคเปล่าๆ</p>
 
 <h2 id="reagent">Reagent</h2>
 
@@ -285,7 +309,7 @@ systax จะมีโครงสร้างแบบนี้</p>
 <pre><code>lein new exponent &lt;project-name&gt;
 </code></pre></li>
 
-<li><p>รัน Exp (และ React Native packager)</p>
+<li><p>รัน Exp</p>
 
 <pre><code>exp start --android
 exp start --ios

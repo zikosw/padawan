@@ -8,7 +8,7 @@
 
 <meta name="description" content="In order to be the best ... you can be, your tools  must be sharp">
 
-<title>Functional Programming</title>
+<title>Expo</title>
 <meta name="generator" content="Hugo 0.21-DEV" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/pojoaque.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
@@ -99,11 +99,16 @@
 <div class="articles-list">
     
     <article>
-        <h3><a href="https://padawan.tech/2016/10/02/haskell-01/">Haskell 101.01 Get Started!</a> - 2016-10-02 02:02:28</h3>
-        ในวงการโปรแกรมเมอร์ทุกวันนี้ เพื่อนๆ padawan น่าจะเคยได้ยินเรื่องเกี่ยวกับ functional programming ซึ่งเป็นเทรนด์ที่กำลังมาแรงในปัจจุบัน ทำให้ผมอยากลองเล่นภาษาที่เป็น pure functional programming language และภาษาที่ผมเลือกจะศึกษาก็คือ Haskell นั่นเอง สำหรับภาษา Haskell นี้ ผมตั้งใจจะทำเขียนเป็นซีรี่ย์ต่อกันไปเรื่อยๆ เพื่อที่ผมกับเพื่อนๆจะได้เรียนรู้ไปด้วยกัน
-ในตอนแรกของซีรี่ย์นี้ ผมจะพาเพื่อนๆมาทำความรู้จัก ติดตั้ง และลองเขียน hello world ในภาษา Haskell กัน
-รู้จักกับ Haskell ภาษา Haskell เป็น pure functional programming language โดยมี type system เป็น strong static typing โดยเวอร์ชันแรกของภาษา Haskell ได้ออกมาในปี 1990 และเติบโตอย่างรวดเร็วผ่าน community open source อย่าง GHC (Glasgow Haskell Compiler)
-การติดตั้ง ภาษา Haskell ได้สนับสนุนการใช้งานในหลากหลายระบบปฏิบัติการ ทั้งใน Linux, Mac OS และ Windows โดยการติดตั้ง Compiler ภาษา Haskell นั้นจะมีเลือกติดตั้งได้ทั้งแบบ minimal ที่จะมีเพียง library พื้นฐาน หรือแบบ Haskell Platform ที่จะมีการติดตั้ง library อื่นๆเพิ่มเติมมาด้วย โดยในที่นี้ จะขอยกตัวอย่างการติดตั้งเฉพาะแบบ Haskell Platform ใน Ubuntu และ Mac OS เท่านั้น
+        <h3><a href="https://padawan.tech/2017/03/18/cljs-reactnative-reframe-en/">Create React Native app with ClojureScript</a> - 2017-03-18 20:30:00</h3>
+        ClojureScript is Lisp dialect which compile to Javascript ecosystem. So we can write any Javascript software with ClojureScript. And ClojureScript is very good language to develop application&rsquo;s UI (TODO: even web or mobile app). Because it have very good tools like Figwheel and REPL. Figwheel is good hot load tool. You don&rsquo;t have to do tedios work like click, click,&hellip; to navigate to things you work on. It&rsquo;s work most of the time (AFIK: React try to do hot load but can&rsquo;t catch Figwheel yet).
+    </article>
+    
+    <article>
+        <h3><a href="https://padawan.tech/2017/03/18/cljs-reactnative-reframe/">เขียน React Native ด้วย ClojureScript และ re-frame</a> - 2017-03-18 20:30:00</h3>
+        ClojureScript นั้นเป็นถาษาตระกูล Lisp ภาษานึงซึ่งจะคอมไพล์โค้ดไปเป็น Javascript เราจึงสามารถเขียนโปรแกรม Javascript ใดๆได้ด้วยเจ้าภาษานี้ โดย ClojureScript เป็นภาษาที่ดีมากๆ สำหรับการนำมาพัฒนาส่วน UI ของแอปพลิเคชันทั้งหลาย ไม่ว่าจะเว็บหรือบนมือถือก็ตาม สิ่งที่ทำให้ผมคิดว่ามันเป็นภาษาที่ดีมากๆสำหรับการพัฒนา UI ก็คือการมี Hot Reload (Figwheel) ที่ดีและเสถียรมาก ซึ่งเป็นสิ่งที่ทำให้ Feedback loop ของการพัฒนาเราเร็วขึ้น เพราะว่าเมื่อเราแก้ไขโค้ดแล้วทำให้เราสามารถเห็นสิ่งที่เราแก้ไขได้ทันทีโดยไม่ต้อง reload หรือต้องกดปุ่มต่างๆจนมาถึงหน้าจอที่เรากำลังแก้อยู่ แล้วก็ยังมี REPL ที่เราจะสามารถทดลองโค้ด ทดลองรันฟังก์ชันก่อนที่เราจะเอาไปใช้งานจริงได้อีกด้วย ในที่นี้ผมจะมาพาเขียน React Native (Mobile App) โดยจะใช้ ClojureScript framework ที่ชื่อว่า re-frame
+Pre-requisite  NodeJs runtime ดาวน์โหลดได้จากที่นี่ JDK สำหรับรัน Clojure ดาวน์โหลดได้จากที่นี่
+ Leiningen เป็น Build tools สำหรับ Clojure ดาวน์โหลดได้จากที่นี่
+  Setup เราจะสร้าง React Native โปรเจ็กท์ ที่ใช้ Expo เพื่อความง่ายในการรันโปรเจ็กท์ขึ้นมา
     </article>
     
 </div>

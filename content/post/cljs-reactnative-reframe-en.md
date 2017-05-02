@@ -1,6 +1,6 @@
 
 +++
-title = "Create React Native app with ClojureScript"
+title = "[CLJS][ReactNative] Create React Native app with ClojureScript"
 tags = [
     "ClojureScript",
     "React Native",
@@ -8,14 +8,14 @@ tags = [
     "reagent",
     "expo"
 ]
-date = "2017-03-18T20:30:00+07:00"
+date = "2017-04-18T20:30:00+07:00"
 author = "ziko"
 description = ""
 +++
 
 ClojureScript is Lisp dialect which compile to Javascript ecosystem. So we can write any Javascript software with ClojureScript.
-And ClojureScript is very good language to develop application's UI (TODO: even web or mobile app).
-Because it have very good tools like Figwheel and REPL. [Figwheel](https://www.youtube.com/watch?v=j-kj2qwJa_E) is good hot load tool. You don't have to do tedios work like click, click,... to navigate to things you work on. It's work most of the time (AFIK: React try to do hot load but can't catch Figwheel yet). With Figwheel + REPL your feedback loop will be faster. 
+And ClojureScript is very good language to develop application's UI.
+Because it have very good tools like Figwheel and REPL. [Figwheel](https://www.youtube.com/watch?v=j-kj2qwJa_E) is good hot load tool. You don't have to do tedios work like click, click,... to navigate to things you work on. It's work most of the time (AFIK: React try to do hot load but can't catch Figwheel yet). With Figwheel + REPL your feedback loop will be faster than you ever was before XD. 
 
 In this blog I will show you how to get start on React Native withClojureScript (also with [re-frame](https://github.com/Day8/re-frame)
  and [Expo](https://docs.expo.io/versions/v15.0.0/index.html))
@@ -45,9 +45,7 @@ In this blog I will show you how to get start on React Native withClojureScript 
 
 1. Start your project
 
-        exp start --android
-        # or
-        exp start --ios
+        exp start
 
     ![app0](/img/cljs/app0.png)
 
@@ -70,9 +68,7 @@ In this blog I will show you how to get start on React Native withClojureScript 
 
 1. Start exp and use Expo app to scan QR CODE again. In this time it will connected  😝 
 
-        exp start --android
-        # or
-        exp start --ios
+        exp start
 
     ![app1](/img/cljs/app1.png)
 
@@ -90,7 +86,7 @@ This is ClojureScript's syntax you need to know to understand some of code in th
 
 1. Vector or Array in other languages.
 
-        ; Cljs
+        ;; Cljs
         [1 2 3 4 5]
 
         // Js
@@ -99,7 +95,7 @@ This is ClojureScript's syntax you need to know to understand some of code in th
 
 1. Map or HashMap which is like Object in Javascript.
 
-        ; Cljs
+        ;; Cljs
         {
             :name       "ClojureScript"
             :creator    "Rich Hickey"    
@@ -113,7 +109,7 @@ This is ClojureScript's syntax you need to know to understand some of code in th
 
 1. Function call - "add" is function that have two parameter.
 
-        ; Cljs
+        ;; Cljs
         (add 1 2)
 
         // Js
@@ -163,7 +159,7 @@ Make alert box appear from your terminal!
 1. Goto Figwheel REPL  
 1. Switch namespace to where a code live  
 
-        (in-ns '[mymobileapp.core])
+        (in-ns 'mymobileapp.core)
 
 1. Call alert function  ( alert function written at line 8 - 9)
 
@@ -180,8 +176,7 @@ Make alert box appear from your terminal!
 
 - Start exp
 
-        exp start --android
-        exp start --ios
+        exp start
 
 - Start Figwheel Server
 

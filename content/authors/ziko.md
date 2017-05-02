@@ -12,5 +12,7 @@ few things about [me](https://github.com/jigkoxsee)
 
 Disclaimer
 
-        ; I'm new to ClojureScript. All of this base on my humble opnion ;)
+        ;; I'm new to ClojureScript. XD
+
+
 

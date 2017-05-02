@@ -1,0 +1,369 @@
+<!doctype html>
+<html>
+<head>
+    <base href="/">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="author" content="-">
+
+<meta name="description" content="In order to be the best ... you can be, your tools  must be sharp">
+
+<title>[CLJS][ReactNative] เขียน React Native ด้วย ClojureScript และ re-frame</title>
+<meta name="generator" content="Hugo 0.21-DEV" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/pojoaque.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet" type="text/css">
+<link  href="https://padawan.tech/css/theme.min.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div class="page-container container-fluid">
+<div class="col-md-3 menu">
+    <nav class="col-md-3">
+    <h3 class="home-link"><a href="/">Root</a></h3>
+    <div id="last-posts" class="open">
+        <h3 data-open="last-posts">Padawan journey - Most recent posts</h3>
+        <ul>
+            
+            <li><a href="https://padawan.tech/2017/04/18/cljs-reactnative-reframe-en/">[CLJS][ReactNative] Create React Native app with ClojureScript</a></li>
+            
+            <li><a href="https://padawan.tech/2017/04/18/cljs-reactnative-reframe/">[CLJS][ReactNative] เขียน React Native ด้วย ClojureScript และ re-frame</a></li>
+            
+            <li><a href="https://padawan.tech/2017/03/04/cljs-nodejs-0/">NodeJs Hello World ด้วย ClojureScript</a></li>
+            
+            <li><a href="https://padawan.tech/2016/10/02/haskell-01/">Haskell 101.01 Get Started!</a></li>
+            
+            <li><a href="https://padawan.tech/2016/09/15/vim/">Vim Survivor</a></li>
+            
+            <li><a href="https://padawan.tech/2016/09/09/welcome/">welcome</a></li>
+            
+            <li><a href="https://padawan.tech/authors/sonk/">sonk</a></li>
+            
+            <li><a href="https://padawan.tech/authors/ziko/">ziko</a></li>
+            
+            <li><a href="https://padawan.tech/authors/">Authors</a></li>
+            
+            <li><a href="https://padawan.tech/tags/cljs/">Cljs</a></li>
+            
+        </ul>
+    </div>
+
+    
+    <div id="tags" class="open">
+        <h3 data-open="tags">Tags</h3>
+        <ul class="tags">
+            
+            <li><a href="/tags/cljs">cljs</a></li>
+            
+            <li><a href="/tags/clojurescript">clojurescript</a></li>
+            
+            <li><a href="/tags/essential">essential</a></li>
+            
+            <li><a href="/tags/expo">expo</a></li>
+            
+            <li><a href="/tags/functional-programming">functional-programming</a></li>
+            
+            <li><a href="/tags/haskell">haskell</a></li>
+            
+            <li><a href="/tags/nodejs">nodejs</a></li>
+            
+            <li><a href="/tags/programming-language">programming-language</a></li>
+            
+            <li><a href="/tags/re-frame">re-frame</a></li>
+            
+            <li><a href="/tags/react-native">react-native</a></li>
+            
+            <li><a href="/tags/reagent">reagent</a></li>
+            
+            <li><a href="/tags/vim">vim</a></li>
+            
+            <li><a href="/tags/vim-%E0%B8%AD%E0%B8%AD%E0%B8%81%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B9%84%E0%B8%87">vim-ออกยังไง</a></li>
+            
+            <li><a href="/tags/vim-%E0%B9%80%E0%B8%8B%E0%B8%9F%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B9%84%E0%B8%87">vim-เซฟยังไง</a></li>
+            
+            <li><a href="/tags/vim-%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B9%84%E0%B8%87">vim-ใช้ยังไง</a></li>
+            
+        </ul>
+    </div>
+    
+
+    
+</nav>
+
+</div>
+<div class="col-md-9 content">
+
+<h1>[CLJS][ReactNative] เขียน React Native ด้วย ClojureScript และ re-frame</h1>
+<h4>Published 04-18-2017 20:30:00
+
+    <span>by</span>
+    <span itemscope="" itemprop="author" itemtype="http://schema.org/Person">
+        <span itemprop="name">
+            <a href="/authors/ziko" itemprop="url" rel="author">ziko</a>
+        </span>
+    </span>
+
+</h4>
+
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="kendo5731"></a>
+<script>!function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+    if (!d.getElementById(id)) {
+        js = d.createElement(s);
+        js.id = id;
+        js.src = p + '://platform.twitter.com/widgets.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }
+}(document, 'script', 'twitter-wjs');</script>
+
+<div class="fb-share-button" data-href="https://padawan.tech/2017/04/18/cljs-reactnative-reframe/" data-layout="button"></div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.5";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<article>
+    
+
+<p>ClojureScript นั้นเป็นถาษาตระกูล Lisp ภาษานึงซึ่งจะคอมไพล์โค้ดไปเป็น Javascript เราจึงสามารถเขียนโปรแกรม Javascript ใดๆได้ด้วยเจ้าภาษานี้ โดย ClojureScript เป็นภาษาที่ดีมากๆ สำหรับการนำมาพัฒนาส่วน UI ของแอปพลิเคชันทั้งหลาย ไม่ว่าจะเว็บหรือบนมือถือก็ตาม สิ่งที่ทำให้ผมคิดว่ามันเป็นภาษาที่ดีมากๆสำหรับการพัฒนา UI ก็คือการมี Hot Reload (<a href="https://www.youtube.com/watch?v=j-kj2qwJa_E">Figwheel</a>) ที่ดีและเสถียรมาก ซึ่งเป็นสิ่งที่ทำให้ Feedback loop ของการพัฒนาเราเร็วขึ้น เพราะว่าเมื่อเราแก้ไขโค้ดแล้วทำให้เราสามารถเห็นสิ่งที่เราแก้ไขได้ทันทีโดยไม่ต้อง reload หรือต้องกดปุ่มต่างๆจนมาถึงหน้าจอที่เรากำลังแก้อยู่ แล้วก็ยังมี REPL ที่เราจะสามารถทดลองโค้ด ทดลองรันฟังก์ชันก่อนที่เราจะเอาไปใช้งานจริงได้อีกด้วย
+ในที่นี้ผมจะมาพาเขียน React Native (Mobile App) โดยจะใช้ ClojureScript framework ที่ชื่อว่า <a href="https://github.com/Day8/re-frame">re-frame</a></p>
+
+<h1 id="pre-requisite">Pre-requisite</h1>
+
+<ul>
+<li>NodeJs runtime <a href="https://nodejs.org/en/download/">ดาวน์โหลดได้จากที่นี่</a></li>
+<li>JDK สำหรับรัน Clojure <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">ดาวน์โหลดได้จากที่นี่</a><br /></li>
+<li>Leiningen เป็น Build tools สำหรับ Clojure <a href="https://leiningen.org/">ดาวน์โหลดได้จากที่นี่</a><br /></li>
+</ul>
+
+<h1 id="setup">Setup</h1>
+
+<p>เราจะสร้าง React Native โปรเจ็กท์ ที่ใช้ <a href="https://docs.expo.io/versions/v15.0.0/index.html">Expo</a> เพื่อความง่ายในการรันโปรเจ็กท์ขึ้นมา</p>
+
+<ol>
+<li><p>ติดตั้ง expo cli โดยใช้คำสั่ง</p>
+
+<pre><code>npm install -g exp
+</code></pre></li>
+
+<li><p>สร้างโปรเจ็กท์ โดยใช้คำสั่ง</p>
+
+<pre><code>lein new exponent mymobileapp
+</code></pre>
+
+<p><a href="https://docs.expo.io/versions/v15.0.0/guides/using-clojurescript.html">Expo+Cljs tutorial</a></p></li>
+
+<li><p>เข้าไปใน mymobileapp แล้วติดตั้ง node-modules ของ React Native และ Expo โดยใช้คำสั่ง</p>
+
+<pre><code>yarn
+หรือ
+npm install
+</code></pre></li>
+
+<li><p>หลังจากนั้นทดสอบรันโปรเจ็กโดยการใช้คำสั่ง</p>
+
+<pre><code>exp start
+</code></pre>
+
+<p>ซึ่งจะได้ผลลัพธ์แบบนี้<br />
+<img src="/img/cljs/app0.png" alt="app0" /></p></li>
+
+<li><p>ที่มือถือให้ลงแอ็ปชื่อ <a href="https://expo.io/">Expo</a> แล้วลองสแกน QR Code ดู
+จะพบว่าใช้ไม่ได้ 😝 เพราะว่าเรายังไม่ได้คอมไพล์โค้ด ClojureScript ของเราเลย 😝</p></li>
+
+<li><p>คอมไพล์โค้ดโดยการรัน Figwheel Server ด้วยคำสั่ง <code>lein figwheel</code> ซึ่งหน้าจอจะไปหยุดอยู่ที่แบบด้านล่าง เพื่อรอการเชื่อมต่อกับแอ็ปในมือถือ</p>
+
+<pre><code>;Prompt will show when Figwheel connects to your application
+</code></pre></li>
+
+<li><p>โดยปกติ exp จะรันในโหมด tunnel ซึ่งจะทำให้เราเปิดแอ็ปได้จากที่ไหนก็ได้ แต่ในที่นี้เราต้องการให้แอ็ปเราสามารถต่อกับ Figwheel Server ได้ เราจึงต้องให้มือถือต่อ Wifi เดียวกับคอม และตั้ง exp ให้รันในโหมด lan โดยการแก้ไฟล์ <code>.expo/settings.json</code> แล้วเปลี่ยนค่าตรง <code>hostType</code> เป็น</p>
+
+<pre><code>&quot;hostType&quot;: &quot;lan&quot;
+</code></pre></li>
+
+<li><p>รัน exp อีกครั้ง สแกน QR Code ที่ได้ แล้วรอโหลดสักครู่ จะได้หน้าจอแบบนี้<br />
+<img src="/img/cljs/app1.png" alt="app1" /></p></li>
+
+<li><p>ที่ figwheel repl ก็จะกลายเป็นแบบนี้เมื่อแอ็ปเราสามารถเชื่อมต่อกับ Figwheel Server ได้<br />
+<img src="/img/cljs/app2.png" alt="app2" /></p></li>
+
+<li><p>สุดท้ายก่อนจะเริ่มเขียนโค้ด เขย่ามือถือเพื่อเรียก Developer Menu ขึ้นมา แล้วปิด Live Reload และ Hot Reloading เพราะ Figwheel ได้จัดการพวกนี้ไว้ให้แล้ว</p></li>
+</ol>
+
+<h1 id="let-s-code">Let&rsquo;s Code</h1>
+
+<h2 id="very-bacis-clojurescript">(very) Bacis ClojureScript</h2>
+
+<p>ผมจะขออธิบายคอนเซ็ปคร่าวๆ ของสิ่งที่จะใช้ในบทความนี้ 3 อย่างของ ClojureScript คือ</p>
+
+<ol>
+<li><p>Vector - ในภาษา Programming อื่นๆก็คือ Array ซึ่งใน ClojureScript นั้นก็ใช้สัญลักษณ์ [ ] เช่นกัน</p>
+
+<pre><code>;; Vector ที่มีสมาชิกเป็น 1, 2, 3, 4, 5
+[1 2 3 4 5]
+// ถ้าหากเทียบกับ Javascript ก็จะหน้าตาแบบนี้
+[1, 2, 3, 4, 5]
+</code></pre></li>
+
+<li><p>Map หรือ HashMap ซึ่งจะคล้ายกับ Object ใน Javascript</p>
+
+<pre><code>;; Cljs
+{
+    :name       &quot;ClojureScript&quot;
+    :creator    &quot;Rich Hickey&quot;    
+}
+
+// Js
+{
+    &quot;name&quot;: &quot;ClojureScript&quot;,
+    &quot;creator&quot;: &quot;Rich Hickey&quot;
+}
+</code></pre></li>
+
+<li><p>การเรียกฟังก์ชัน - สมมติว่าเรามีฟังก์ชันบวกเลขที่รับ Parameter 2 ตัว</p>
+
+<pre><code>;; Cljs
+(add 1 2)
+
+// Js
+add(1, 2)
+</code></pre></li>
+</ol>
+
+<p>จริงๆแล้วหากเราสามารถใส่ , ลงไประหว่างค่าแต่ละค่าได้ หากคิดว่าโค้ดอ่านยาก ซึ่งตัว ClojureScript compiler นั้นจะมองว่า , เหมือนกับการเว้นวรรคเปล่าๆ</p>
+
+<h2 id="reagent">Reagent</h2>
+
+<p>ก่อนจะไปรู้จักกับ re-frame เราจะต้องรู้จักกับ Reagent ซะก่อน เจ้า Reagent นั้นก็คือ ClojureScript React wrapper ที่จะทำหน้าที่ในการแปลงโค้ด ClojureScript  ที่เราเขียนไปอยู่ในสิ่งที่ React รู้จักแล้วนำไปแสดงผลได้ โดย syntax ที่เราจะใช้ในการเขียน Reagent นั้นจะเหมือนกับว่าเราเขียน data-structure ของ ClojureScript เลย ซึ่งจะเป็นการสร้าง Vector (array) และ Map (hashmap) ธรรมดา<br />
+systax จะมีโครงสร้างแบบนี้</p>
+
+<pre><code>[component attributes child child]  ; โครงสร้างปกติ
+[component]                         ; โครงสร้างที่สั้นที่สุดที่ทำงานได้
+[Text &quot;Hello World&quot;]                ; ตัวอย่าง: Text คือ component, &quot;Hello World&quot; คือ child
+</code></pre>
+
+<p>ตัวอย่างโค้ดในแบบ JSX</p>
+
+<pre><code>&lt;View style={{flex:1, justifyContent: &quot;center&quot;, alignItems: &quot;center&quot;}}&gt;
+    &lt;Text&gt;Hello React Native&lt;/Text&gt;
+&lt;/View&gt;
+</code></pre>
+
+<p>ถ้าเป็นใน Reagent ก็จะหน้าตาแบบนี้</p>
+
+<pre><code>[View                               ; component
+    {:style {                       ; attributes
+        :flex 1
+        :justify-content &quot;center&quot;
+        :align-items &quot;center&quot;
+    }}
+    [Text &quot;Hello React Native&quot;]]    ; child
+</code></pre>
+
+<h2 id="re-frame">re-frame</h2>
+
+<p>re-frame คือ reagent framework ซึ่งจะมีหน้าที่ในการจัดการข้อมูลต่างๆ ทั้ง App State หรือ  Handle ต่างๆ จากรูปด้านล่างหน้าที่ของ re-frame คือจัดการข้อ 1 ถึง 4 (จาก <a href="https://github.com/Day8/re-frame#it-is-a-6-domino-cascade">6-domino cascade</a>)<br />
+<img src="/img/cljs/reframe-dominos.png" alt="reframe" /></p>
+
+<h2 id="figwheel-hot-reloading">Figwheel - Hot Reloading</h2>
+
+<p>ทดลอง Hot Reloading โดยการแก้ไขคำบนปุ่มเป็นคำว่า Hello และแก้ข้อความใน Alert เป็น Hello from Button
+<script src="//gist.github.com/jigkoxsee/e4478ca1ad4e42112afb06742d0962d2.js"></script>
+เมื่อเรากด Save ไฟล์ ข้อความบนปุ่มจะเปลี่ยน โดยที่ไมไ่ด้มีการ reload และเมื่อกดปุ่มข้อความใน Alert box ก็จะถูกเปลี่ยนเรียบร้อยแล้ว</p>
+
+<h2 id="repl">REPL</h2>
+
+<p>ทดสอบการใช้งาน REPL โดยการสั่ง Alert</p>
+
+<ol>
+<li>ไปที่ Figwheel REPL<br /></li>
+
+<li><p>เปลี่ยน namespace ไปที่ๆ มีโค้ด alert อยู่ โดยพิมพ์ดังนี้</p>
+
+<pre><code>(in-ns 'mymobileapp.core)
+</code></pre></li>
+
+<li><p>ทดลองสั่ง alert  (ฟังก์ชัน alert ถูกเขียนไว้ในบรรทัดที่ 8 - 9)</p>
+
+<pre><code>(alert &quot;Hi from REPL!&quot;)
+</code></pre></li>
+</ol>
+
+<ul>
+<li>เพิ่มเติม - <a href="https://www.facebook.com/jigkobenja/videos/vb.100000154047359/1638596939488758/?type=2&amp;theater">คลิปตัวอย่างใช้ REPL</a></li>
+</ul>
+
+<h1 id="note-command-list">Note - Command list</h1>
+
+<ul>
+<li><p>สร้างโปรเจ็กท์</p>
+
+<pre><code>lein new exponent &lt;project-name&gt;
+</code></pre></li>
+
+<li><p>รัน Exp</p>
+
+<pre><code>exp start
+</code></pre></li>
+
+<li><p>รัน Figwheel Server</p>
+
+<pre><code>lein figwheel
+</code></pre></li>
+</ul>
+
+<h1 id="next">Next</h1>
+
+<p>เนื้อหาในบทความนี้เป็นเพียงแค่การเริ่มต้นรันโปรเจ็กท์คือมาเล่นเท่านั้น ซึ่งอาจจะยังไม่เห็นภาพหรือยังไม่เข้าใจมากพอ 😆 รอบทความหน้าผมจะอธิบายถึงการใช้งาน re-frame โดยการทำแอ็ป Todo ซึ่งจะทำให้เห็นภาพการใช้งานที่เหมือนจริงมากขึ้นครับ 😁</p>
+
+</article>
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6790702287470373";
+    google_ad_slot = "4471144903";
+    google_ad_width = 728;
+    google_ad_height = 90;
+</script>
+
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'padawantech';
+    var disqus_identifier = 'https:\/\/padawan.tech\/2017\/04\/18\/cljs-reactnative-reframe\/';
+    var disqus_title = '[CLJS][ReactNative] เขียน React Native ด้วย ClojureScript และ re-frame';
+    var disqus_url = 'https:\/\/padawan.tech\/2017\/04\/18\/cljs-reactnative-reframe\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+</div>
+<script src="js/theme.min.js" type="text/javascript"></script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-84195554-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+</body>
+</html>
+

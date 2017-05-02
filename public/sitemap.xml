@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://padawan.tech/2017/03/18/cljs-reactnative-reframe-en/</loc>
-    <lastmod>2017-03-18T20:30:00+07:00</lastmod>
+    <loc>https://padawan.tech/2017/04/18/cljs-reactnative-reframe-en/</loc>
+    <lastmod>2017-04-18T20:30:00+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://padawan.tech/2017/03/18/cljs-reactnative-reframe/</loc>
-    <lastmod>2017-03-18T20:30:00+07:00</lastmod>
+    <loc>https://padawan.tech/2017/04/18/cljs-reactnative-reframe/</loc>
+    <lastmod>2017-04-18T20:30:00+07:00</lastmod>
   </url>
   
   <url>
@@ -55,7 +55,7 @@
   
   <url>
     <loc>https://padawan.tech/tags/clojurescript/</loc>
-    <lastmod>2017-03-18T20:30:00+07:00</lastmod>
+    <lastmod>2017-04-18T20:30:00+07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -67,7 +67,7 @@
   
   <url>
     <loc>https://padawan.tech/tags/expo/</loc>
-    <lastmod>2017-03-18T20:30:00+07:00</lastmod>
+    <lastmod>2017-04-18T20:30:00+07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -91,13 +91,13 @@
   
   <url>
     <loc>https://padawan.tech/</loc>
-    <lastmod>2017-03-18T20:30:00+07:00</lastmod>
+    <lastmod>2017-04-18T20:30:00+07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://padawan.tech/post/</loc>
-    <lastmod>2017-03-18T20:30:00+07:00</lastmod>
+    <lastmod>2017-04-18T20:30:00+07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -109,19 +109,19 @@
   
   <url>
     <loc>https://padawan.tech/tags/re-frame/</loc>
-    <lastmod>2017-03-18T20:30:00+07:00</lastmod>
+    <lastmod>2017-04-18T20:30:00+07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://padawan.tech/tags/react-native/</loc>
-    <lastmod>2017-03-18T20:30:00+07:00</lastmod>
+    <lastmod>2017-04-18T20:30:00+07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://padawan.tech/tags/reagent/</loc>
-    <lastmod>2017-03-18T20:30:00+07:00</lastmod>
+    <lastmod>2017-04-18T20:30:00+07:00</lastmod>
     <priority>0</priority>
   </url>
   

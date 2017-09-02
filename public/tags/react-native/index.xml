@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>React Native on Padawan journey</title>
-    <link>https://padawan.tech/tags/react-native/</link>
+    <link>https://dev.jigko.net/tags/react-native/</link>
     <description>Recent content in React Native on Padawan journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Jedi Z</copyright>
     <lastBuildDate>Tue, 18 Apr 2017 20:30:00 +0700</lastBuildDate>
     
-	<atom:link href="https://padawan.tech/tags/react-native/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dev.jigko.net/tags/react-native/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[CLJS][ReactNative] Create React Native app with ClojureScript</title>
-      <link>https://padawan.tech/2017/04/18/cljs-reactnative-reframe-en/</link>
+      <link>https://dev.jigko.net/2017/04/18/cljs-reactnative-reframe-en/</link>
       <pubDate>Tue, 18 Apr 2017 20:30:00 +0700</pubDate>
       
-      <guid>https://padawan.tech/2017/04/18/cljs-reactnative-reframe-en/</guid>
+      <guid>https://dev.jigko.net/2017/04/18/cljs-reactnative-reframe-en/</guid>
       <description>ClojureScript is Lisp dialect which compile to Javascript ecosystem. So we can write any Javascript software with ClojureScript. And ClojureScript is very good language to develop application&amp;rsquo;s UI. Because it have very good tools like Figwheel and REPL. Figwheel is good hot load tool. You don&amp;rsquo;t have to do tedios work like click, click,&amp;hellip; to navigate to things you work on. It&amp;rsquo;s work most of the time (AFIK: React try to do hot load but can&amp;rsquo;t catch Figwheel yet).</description>
     </item>
     
     <item>
       <title>[CLJS][ReactNative] เขียน React Native ด้วย ClojureScript และ re-frame</title>
-      <link>https://padawan.tech/2017/04/18/cljs-reactnative-reframe/</link>
+      <link>https://dev.jigko.net/2017/04/18/cljs-reactnative-reframe/</link>
       <pubDate>Tue, 18 Apr 2017 20:30:00 +0700</pubDate>
       
-      <guid>https://padawan.tech/2017/04/18/cljs-reactnative-reframe/</guid>
+      <guid>https://dev.jigko.net/2017/04/18/cljs-reactnative-reframe/</guid>
       <description>ClojureScript นั้นเป็นถาษาตระกูล Lisp ภาษานึงซึ่งจะคอมไพล์โค้ดไปเป็น Javascript เราจึงสามารถเขียนโปรแกรม Javascript ใดๆได้ด้วยเจ้าภาษานี้ โดย ClojureScript เป็นภาษาที่ดีมากๆ สำหรับการนำมาพัฒนาส่วน UI ของแอปพลิเคชันทั้งหลาย ไม่ว่าจะเว็บหรือบนมือถือก็ตาม สิ่งที่ทำให้ผมคิดว่ามันเป็นภาษาที่ดีมากๆสำหรับการพัฒนา UI ก็คือการมี Hot Reload (Figwheel) ที่ดีและเสถียรมาก ซึ่งเป็นสิ่งที่ทำให้ Feedback loop ของการพัฒนาเราเร็วขึ้น เพราะว่าเมื่อเราแก้ไขโค้ดแล้วทำให้เราสามารถเห็นสิ่งที่เราแก้ไขได้ทันทีโดยไม่ต้อง reload หรือต้องกดปุ่มต่างๆจนมาถึงหน้าจอที่เรากำลังแก้อยู่ แล้วก็ยังมี REPL ที่เราจะสามารถทดลองโค้ด ทดลองรันฟังก์ชันก่อนที่เราจะเอาไปใช้งานจริงได้อีกด้วย ในที่นี้ผมจะมาพาเขียน React Native (Mobile App) โดยจะใช้ ClojureScript framework ที่ชื่อว่า re-frame
 Pre-requisite  NodeJs runtime ดาวน์โหลดได้จากที่นี่ JDK สำหรับรัน Clojure ดาวน์โหลดได้จากที่นี่
  Leiningen เป็น Build tools สำหรับ Clojure ดาวน์โหลดได้จากที่นี่

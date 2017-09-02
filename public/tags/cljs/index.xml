@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cljs on Padawan journey</title>
-    <link>https://padawan.tech/tags/cljs/</link>
+    <link>https://dev.jigko.net/tags/cljs/</link>
     <description>Recent content in Cljs on Padawan journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Jedi Z</copyright>
     <lastBuildDate>Sat, 04 Mar 2017 11:01:32 +0700</lastBuildDate>
     
-	<atom:link href="https://padawan.tech/tags/cljs/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dev.jigko.net/tags/cljs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>NodeJs Hello World ด้วย ClojureScript</title>
-      <link>https://padawan.tech/2017/03/04/cljs-nodejs-0/</link>
+      <link>https://dev.jigko.net/2017/03/04/cljs-nodejs-0/</link>
       <pubDate>Sat, 04 Mar 2017 11:01:32 +0700</pubDate>
       
-      <guid>https://padawan.tech/2017/03/04/cljs-nodejs-0/</guid>
+      <guid>https://dev.jigko.net/2017/03/04/cljs-nodejs-0/</guid>
       <description>สิ่งที่จะทำวันนี้ก็คือเขียนเริ่มต้น Nodejs application ด้วย ClojureScript, แล้วทำไมต้องเป็น ClojureScript? งั้นไปรู้จักกับ ClojureScript แบบคร่าวๆ กันก่อน
 ClojureScript คือ ? คอมไพเลอร์สำหรับภาษา Clojure ที่ คอมไพล์โค้ดจาก Clojure ไปเป็นโค้ด JavaScript
 Clojure คือ ? Functional programming ภาษาหนึ่ง โดยที่มี Syntax เหมือนกับภาษา Lisp ซึ่งเจ้า Clojure นี่แหล่ะมีสิ่งที่น่าสนใจอยู่หลายอย่างเลยทีเดียว แต่ในที่นี้จะขอข้ามไปก่อน 🤣

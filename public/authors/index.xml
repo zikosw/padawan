@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors on Padawan journey</title>
-    <link>https://padawan.tech/authors/</link>
+    <link>https://dev.jigko.net/authors/</link>
     <description>Recent content in Authors on Padawan journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Jedi Z</copyright>
     <lastBuildDate>Tue, 02 Aug 2016 12:17:41 +0700</lastBuildDate>
     
-	<atom:link href="https://padawan.tech/authors/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dev.jigko.net/authors/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>sonk</title>
-      <link>https://padawan.tech/authors/sonk/</link>
+      <link>https://dev.jigko.net/authors/sonk/</link>
       <pubDate>Tue, 02 Aug 2016 12:17:41 +0700</pubDate>
       
-      <guid>https://padawan.tech/authors/sonk/</guid>
+      <guid>https://dev.jigko.net/authors/sonk/</guid>
       <description>Nothing in here yet</description>
     </item>
     
     <item>
       <title>ziko</title>
-      <link>https://padawan.tech/authors/ziko/</link>
+      <link>https://dev.jigko.net/authors/ziko/</link>
       <pubDate>Tue, 02 Aug 2016 01:35:21 +0700</pubDate>
       
-      <guid>https://padawan.tech/authors/ziko/</guid>
+      <guid>https://dev.jigko.net/authors/ziko/</guid>
       <description>Ziko : Hello
 few things about me
 Disclaimer

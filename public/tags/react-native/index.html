@@ -9,7 +9,7 @@
 <meta name="description" content="In order to be the best ... you can be, your tools  must be sharp">
 
 <title>React Native</title>
-<meta name="generator" content="Hugo 0.21-DEV" />
+<meta name="generator" content="Hugo 0.31.1" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/pojoaque.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
@@ -26,6 +26,8 @@
     <div id="last-posts" class="open">
         <h3 data-open="last-posts">Padawan journey - Most recent posts</h3>
         <ul>
+            
+            <li><a href="https://dev.jigko.net/2017/12/24/xzc-multisig/">XZC Multisignature</a></li>
             
             <li><a href="https://dev.jigko.net/2017/04/18/cljs-reactnative-reframe-en/">[CLJS][ReactNative] Create React Native app with ClojureScript</a></li>
             
@@ -44,8 +46,6 @@
             <li><a href="https://dev.jigko.net/authors/ziko/">ziko</a></li>
             
             <li><a href="https://dev.jigko.net/authors/">Authors</a></li>
-            
-            <li><a href="https://dev.jigko.net/tags/cljs/">Cljs</a></li>
             
         </ul>
     </div>
@@ -67,6 +67,10 @@
             
             <li><a href="/tags/haskell">haskell</a></li>
             
+            <li><a href="/tags/multi-signature">multi-signature</a></li>
+            
+            <li><a href="/tags/multisig">multisig</a></li>
+            
             <li><a href="/tags/nodejs">nodejs</a></li>
             
             <li><a href="/tags/programming-language">programming-language</a></li>
@@ -85,6 +89,10 @@
             
             <li><a href="/tags/vim-%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B9%84%E0%B8%87">vim-ใช้ยังไง</a></li>
             
+            <li><a href="/tags/xzc">xzc</a></li>
+            
+            <li><a href="/tags/zcoin">zcoin</a></li>
+            
         </ul>
     </div>
     
@@ -99,11 +107,6 @@
 <div class="articles-list">
     
     <article>
-        <h3><a href="https://dev.jigko.net/2017/04/18/cljs-reactnative-reframe-en/">[CLJS][ReactNative] Create React Native app with ClojureScript</a> - 2017-04-18 20:30:00</h3>
-        ClojureScript is Lisp dialect which compile to Javascript ecosystem. So we can write any Javascript software with ClojureScript. And ClojureScript is very good language to develop application&rsquo;s UI. Because it have very good tools like Figwheel and REPL. Figwheel is good hot load tool. You don&rsquo;t have to do tedios work like click, click,&hellip; to navigate to things you work on. It&rsquo;s work most of the time (AFIK: React try to do hot load but can&rsquo;t catch Figwheel yet).
-    </article>
-    
-    <article>
         <h3><a href="https://dev.jigko.net/2017/04/18/cljs-reactnative-reframe/">[CLJS][ReactNative] เขียน React Native ด้วย ClojureScript และ re-frame</a> - 2017-04-18 20:30:00</h3>
         ClojureScript นั้นเป็นถาษาตระกูล Lisp ภาษานึงซึ่งจะคอมไพล์โค้ดไปเป็น Javascript เราจึงสามารถเขียนโปรแกรม Javascript ใดๆได้ด้วยเจ้าภาษานี้ โดย ClojureScript เป็นภาษาที่ดีมากๆ สำหรับการนำมาพัฒนาส่วน UI ของแอปพลิเคชันทั้งหลาย ไม่ว่าจะเว็บหรือบนมือถือก็ตาม สิ่งที่ทำให้ผมคิดว่ามันเป็นภาษาที่ดีมากๆสำหรับการพัฒนา UI ก็คือการมี Hot Reload (Figwheel) ที่ดีและเสถียรมาก ซึ่งเป็นสิ่งที่ทำให้ Feedback loop ของการพัฒนาเราเร็วขึ้น เพราะว่าเมื่อเราแก้ไขโค้ดแล้วทำให้เราสามารถเห็นสิ่งที่เราแก้ไขได้ทันทีโดยไม่ต้อง reload หรือต้องกดปุ่มต่างๆจนมาถึงหน้าจอที่เรากำลังแก้อยู่ แล้วก็ยังมี REPL ที่เราจะสามารถทดลองโค้ด ทดลองรันฟังก์ชันก่อนที่เราจะเอาไปใช้งานจริงได้อีกด้วย ในที่นี้ผมจะมาพาเขียน React Native (Mobile App) โดยจะใช้ ClojureScript framework ที่ชื่อว่า re-frame
 Pre-requisite  NodeJs runtime ดาวน์โหลดได้จากที่นี่ JDK สำหรับรัน Clojure ดาวน์โหลดได้จากที่นี่
@@ -111,9 +114,14 @@ Pre-requisite  NodeJs runtime ดาวน์โหลดได้จากท�
   Setup เราจะสร้าง React Native โปรเจ็กท์ ที่ใช้ Expo เพื่อความง่ายในการรันโปรเจ็กท์ขึ้นมา
     </article>
     
+    <article>
+        <h3><a href="https://dev.jigko.net/2017/04/18/cljs-reactnative-reframe-en/">[CLJS][ReactNative] Create React Native app with ClojureScript</a> - 2017-04-18 20:30:00</h3>
+        ClojureScript is Lisp dialect which compile to Javascript ecosystem. So we can write any Javascript software with ClojureScript. And ClojureScript is very good language to develop application&rsquo;s UI. Because it have very good tools like Figwheel and REPL. Figwheel is good hot load tool. You don&rsquo;t have to do tedios work like click, click,&hellip; to navigate to things you work on. It&rsquo;s work most of the time (AFIK: React try to do hot load but can&rsquo;t catch Figwheel yet).
+    </article>
+    
 </div>
 
-    
+
 </div>
 </div>
 <script src="js/theme.min.js" type="text/javascript"></script>

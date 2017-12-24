@@ -7,10 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Jedi Z</copyright>
-    <lastBuildDate>Tue, 18 Apr 2017 20:30:00 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 24 Dec 2017 11:07:16 +0700</lastBuildDate>
     
 	<atom:link href="https://dev.jigko.net/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>XZC Multisignature</title>
+      <link>https://dev.jigko.net/2017/12/24/xzc-multisig/</link>
+      <pubDate>Sun, 24 Dec 2017 11:07:16 +0700</pubDate>
+      
+      <guid>https://dev.jigko.net/2017/12/24/xzc-multisig/</guid>
+      <description>Hello This use zcoin-qt or zcoin-cli
+1. Create Multisignature address In this post we will create multisignature address that will require 3/4 key when signing.
+// Different address ordering will get different address createmultisig 3 &#39;[&amp;quot;aNjWZuLTyCEWXr53eXGx4rx8CWUWiKxb9V&amp;quot;,&amp;quot;aLQSorufappuwunj38TG6wZmkmeEk65xjq&amp;quot;,&amp;quot;a6kyUv65AxHqbjMd4w2ybvjaYwidHZsdYK&amp;quot;,&amp;quot;a2VowQ1X1Dh7oRBPzRCDr9Ktn99Lgpiw7y&amp;quot;]&#39;  You will get this
+{ &amp;quot;address&amp;quot;: &amp;quot;3zfBYGjxri137ymrGVqazE5mZxu4Uv4kog&amp;quot;, &amp;quot;redeemScript&amp;quot;: &amp;quot;532103745b394a20747f09febbe2b34057586df24980d5645be7b181a613030814d34d210219ee4e32cbbdc71c386a3b51cda9bc858085c556259a2c8c24182286634e20fc21025cb3701dbb6d4b4503ed3405f236e315e273b6745431ebdba3282afeac262f0f2103981c7bb352ed9d8fcb62f07feab8ede8324cb86a1a400a041ab2145fee214aae54ae&amp;quot; }  2. Send XZC to Multisignature address txid= a3c0e664267214a11274ba6fb71ae8c8d1c808d47499873c98d1acf612783aea https://explorer.zcoin.io/api/getrawtransaction?txid=a3c0e664267214a11274ba6fb71ae8c8d1c808d47499873c98d1acf612783aea&amp;amp;decrypt=1
+3. Create Raw Transaction 3.1 Get ScriptPubKey validateaddress 
+{ &amp;quot;isvalid&amp;quot;: true, &amp;quot;address&amp;quot;: &amp;quot;3zfBYGjxri137ymrGVqazE5mZxu4Uv4kog&amp;quot;, &amp;quot;scriptPubKey&amp;quot;: &amp;quot;a91470e65d62eef9beda8e45398e976be674225fbf8387&amp;quot;, &amp;quot;ismine&amp;quot;: true, &amp;quot;iswatchonly&amp;quot;: false, &amp;quot;isscript&amp;quot;: true, &amp;quot;script&amp;quot;: &amp;quot;multisig&amp;quot;, // Hex is RedeemScript &amp;quot;hex&amp;quot;: &amp;quot;532103745b394a20747f09febbe2b34057586df24980d5645be7b181a613030814d34d210219ee4e32cbbdc71c386a3b51cda9bc858085c556259a2c8c24182286634e20fc21025cb3701dbb6d4b4503ed3405f236e315e273b6745431ebdba3282afeac262f0f2103981c7bb352ed9d8fcb62f07feab8ede8324cb86a1a400a041ab2145fee214aae54ae&amp;quot;, &amp;quot;addresses&amp;quot;: [ &amp;quot;aNjWZuLTyCEWXr53eXGx4rx8CWUWiKxb9V&amp;quot;, &amp;quot;aLQSorufappuwunj38TG6wZmkmeEk65xjq&amp;quot;, &amp;quot;a6kyUv65AxHqbjMd4w2ybvjaYwidHZsdYK&amp;quot;, &amp;quot;a2VowQ1X1Dh7oRBPzRCDr9Ktn99Lgpiw7y&amp;quot; ], &amp;quot;sigsrequired&amp;quot;: 3, }  3.</description>
+    </item>
     
     <item>
       <title>[CLJS][ReactNative] Create React Native app with ClojureScript</title>

@@ -1,0 +1,367 @@
+<!doctype html>
+<html>
+<head>
+    <base href="/">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="author" content="-">
+
+<meta name="description" content="In order to be the best ... you can be, your tools  must be sharp">
+
+<title>XZC Multisignature</title>
+<meta name="generator" content="Hugo 0.31.1" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/pojoaque.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet" type="text/css">
+<link  href="https://dev.jigko.net/css/theme.min.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div class="page-container container-fluid">
+<div class="col-md-3 menu">
+    <nav class="col-md-3">
+    <h3 class="home-link"><a href="/">Root</a></h3>
+    <div id="last-posts" class="open">
+        <h3 data-open="last-posts">Padawan journey - Most recent posts</h3>
+        <ul>
+            
+            <li><a href="https://dev.jigko.net/2017/12/24/xzc-multisig/">XZC Multisignature</a></li>
+            
+            <li><a href="https://dev.jigko.net/2017/04/18/cljs-reactnative-reframe-en/">[CLJS][ReactNative] Create React Native app with ClojureScript</a></li>
+            
+            <li><a href="https://dev.jigko.net/2017/04/18/cljs-reactnative-reframe/">[CLJS][ReactNative] เขียน React Native ด้วย ClojureScript และ re-frame</a></li>
+            
+            <li><a href="https://dev.jigko.net/2017/03/04/cljs-nodejs-0/">NodeJs Hello World ด้วย ClojureScript</a></li>
+            
+            <li><a href="https://dev.jigko.net/2016/10/02/haskell-01/">Haskell 101.01 Get Started!</a></li>
+            
+            <li><a href="https://dev.jigko.net/2016/09/15/vim/">Vim Survivor</a></li>
+            
+            <li><a href="https://dev.jigko.net/2016/09/09/welcome/">welcome</a></li>
+            
+            <li><a href="https://dev.jigko.net/authors/sonk/">sonk</a></li>
+            
+            <li><a href="https://dev.jigko.net/authors/ziko/">ziko</a></li>
+            
+            <li><a href="https://dev.jigko.net/authors/">Authors</a></li>
+            
+        </ul>
+    </div>
+
+    
+    <div id="tags" class="open">
+        <h3 data-open="tags">Tags</h3>
+        <ul class="tags">
+            
+            <li><a href="/tags/cljs">cljs</a></li>
+            
+            <li><a href="/tags/clojurescript">clojurescript</a></li>
+            
+            <li><a href="/tags/essential">essential</a></li>
+            
+            <li><a href="/tags/expo">expo</a></li>
+            
+            <li><a href="/tags/functional-programming">functional-programming</a></li>
+            
+            <li><a href="/tags/haskell">haskell</a></li>
+            
+            <li><a href="/tags/multi-signature">multi-signature</a></li>
+            
+            <li><a href="/tags/multisig">multisig</a></li>
+            
+            <li><a href="/tags/nodejs">nodejs</a></li>
+            
+            <li><a href="/tags/programming-language">programming-language</a></li>
+            
+            <li><a href="/tags/re-frame">re-frame</a></li>
+            
+            <li><a href="/tags/react-native">react-native</a></li>
+            
+            <li><a href="/tags/reagent">reagent</a></li>
+            
+            <li><a href="/tags/vim">vim</a></li>
+            
+            <li><a href="/tags/vim-%E0%B8%AD%E0%B8%AD%E0%B8%81%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B9%84%E0%B8%87">vim-ออกยังไง</a></li>
+            
+            <li><a href="/tags/vim-%E0%B9%80%E0%B8%8B%E0%B8%9F%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B9%84%E0%B8%87">vim-เซฟยังไง</a></li>
+            
+            <li><a href="/tags/vim-%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B9%84%E0%B8%87">vim-ใช้ยังไง</a></li>
+            
+            <li><a href="/tags/xzc">xzc</a></li>
+            
+            <li><a href="/tags/zcoin">zcoin</a></li>
+            
+        </ul>
+    </div>
+    
+
+    
+</nav>
+
+</div>
+<div class="col-md-9 content">
+
+<h1>XZC Multisignature</h1>
+<h4>Published 12-24-2017 11:07:16
+
+</h4>
+
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="kendo5731"></a>
+<script>!function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+    if (!d.getElementById(id)) {
+        js = d.createElement(s);
+        js.id = id;
+        js.src = p + '://platform.twitter.com/widgets.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }
+}(document, 'script', 'twitter-wjs');</script>
+
+<div class="fb-share-button" data-href="https://dev.jigko.net/2017/12/24/xzc-multisig/" data-layout="button"></div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.5";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<article>
+    
+
+<p>Hello
+This use zcoin-qt or zcoin-cli</p>
+
+<h1 id="1-create-multisignature-address">1. Create Multisignature address</h1>
+
+<p>In this post we will create multisignature address that will require <code>3/4</code> key when signing.</p>
+
+<pre><code>// Different address ordering will get different address
+createmultisig 3 '[&quot;aNjWZuLTyCEWXr53eXGx4rx8CWUWiKxb9V&quot;,&quot;aLQSorufappuwunj38TG6wZmkmeEk65xjq&quot;,&quot;a6kyUv65AxHqbjMd4w2ybvjaYwidHZsdYK&quot;,&quot;a2VowQ1X1Dh7oRBPzRCDr9Ktn99Lgpiw7y&quot;]'
+</code></pre>
+
+<p>You will get this</p>
+
+<pre><code class="language-js">{
+  &quot;address&quot;: &quot;3zfBYGjxri137ymrGVqazE5mZxu4Uv4kog&quot;,
+  &quot;redeemScript&quot;: &quot;532103745b394a20747f09febbe2b34057586df24980d5645be7b181a613030814d34d210219ee4e32cbbdc71c386a3b51cda9bc858085c556259a2c8c24182286634e20fc21025cb3701dbb6d4b4503ed3405f236e315e273b6745431ebdba3282afeac262f0f2103981c7bb352ed9d8fcb62f07feab8ede8324cb86a1a400a041ab2145fee214aae54ae&quot;
+}
+</code></pre>
+
+<h1 id="2-send-xzc-to-multisignature-address">2. Send XZC to Multisignature address</h1>
+
+<p>txid= a3c0e664267214a11274ba6fb71ae8c8d1c808d47499873c98d1acf612783aea
+<a href="https://explorer.zcoin.io/api/getrawtransaction?txid=a3c0e664267214a11274ba6fb71ae8c8d1c808d47499873c98d1acf612783aea&amp;decrypt=1">https://explorer.zcoin.io/api/getrawtransaction?txid=a3c0e664267214a11274ba6fb71ae8c8d1c808d47499873c98d1acf612783aea&amp;decrypt=1</a></p>
+
+<h1 id="3-create-raw-transaction">3. Create Raw Transaction</h1>
+
+<h2 id="3-1-get-scriptpubkey">3.1 Get ScriptPubKey</h2>
+
+<p>validateaddress <address></p>
+
+<pre><code class="language-js">{
+  &quot;isvalid&quot;: true,
+  &quot;address&quot;: &quot;3zfBYGjxri137ymrGVqazE5mZxu4Uv4kog&quot;,
+  &quot;scriptPubKey&quot;: &quot;a91470e65d62eef9beda8e45398e976be674225fbf8387&quot;,
+  &quot;ismine&quot;: true,
+  &quot;iswatchonly&quot;: false,
+  &quot;isscript&quot;: true,
+  &quot;script&quot;: &quot;multisig&quot;,
+  // Hex is RedeemScript
+  &quot;hex&quot;: &quot;532103745b394a20747f09febbe2b34057586df24980d5645be7b181a613030814d34d210219ee4e32cbbdc71c386a3b51cda9bc858085c556259a2c8c24182286634e20fc21025cb3701dbb6d4b4503ed3405f236e315e273b6745431ebdba3282afeac262f0f2103981c7bb352ed9d8fcb62f07feab8ede8324cb86a1a400a041ab2145fee214aae54ae&quot;,
+  &quot;addresses&quot;: [
+    &quot;aNjWZuLTyCEWXr53eXGx4rx8CWUWiKxb9V&quot;, 
+    &quot;aLQSorufappuwunj38TG6wZmkmeEk65xjq&quot;, 
+    &quot;a6kyUv65AxHqbjMd4w2ybvjaYwidHZsdYK&quot;, 
+    &quot;a2VowQ1X1Dh7oRBPzRCDr9Ktn99Lgpiw7y&quot;
+  ],
+  &quot;sigsrequired&quot;: 3,
+}
+</code></pre>
+
+<h3 id="3-2-create-raw-transaction">3.2 Create Raw Transaction</h3>
+
+<p>We will create transaction that send 0.002 XZC to aBZgi9FCgRZ271eBJ96WyUKx8WoxAyoN2C</p>
+
+<pre><code>createrawtransaction '[{&quot;txid&quot;:&quot;a3c0e664267214a11274ba6fb71ae8c8d1c808d47499873c98d1acf612783aea&quot;,&quot;vout&quot;:1,&quot;scriptPubKey&quot;:&quot;a91470e65d62eef9beda8e45398e976be674225fbf8387&quot;,&quot;redeemScript&quot;:&quot;532103745b394a20747f09febbe2b34057586df24980d5645be7b181a613030814d34d210219ee4e32cbbdc71c386a3b51cda9bc858085c556259a2c8c24182286634e20fc21025cb3701dbb6d4b4503ed3405f236e315e273b6745431ebdba3282afeac262f0f2103981c7bb352ed9d8fcb62f07feab8ede8324cb86a1a400a041ab2145fee214aae54ae&quot;}]' '{&quot;aBZgi9FCgRZ271eBJ96WyUKx8WoxAyoN2C&quot;:0.002}'
+</code></pre>
+
+<p>You will get hex transaction</p>
+
+<pre><code>0100000001ea3a7812f6acd1983c879974d408c8d1c8e81ab76fba7412a114722664e6c0a30100000000ffffffff01400d0300000000001976a91477007769e13c0834ced00a9c796e807232901feb88ac00000000
+</code></pre>
+
+<p>which can decode to see a raw transaction by use <code>decoderawtransaction 0100000001ea3a7812f6acd1983c879974d408c8d1c8e81ab76fba7412a114722664e6c0a30100000000ffffffff01400d0300000000001976a91477007769e13c0834ced00a9c796e807232901feb88ac00000000</code></p>
+
+<p>You will get origin raw transaction like this</p>
+
+<pre><code class="language-js">{
+  &quot;txid&quot;: &quot;126b03b20c0c241029a243c2218b0d2142462702c80499dcf480b2a2fdb76118&quot;,
+  &quot;hash&quot;: &quot;126b03b20c0c241029a243c2218b0d2142462702c80499dcf480b2a2fdb76118&quot;,
+  &quot;size&quot;: 85,
+  &quot;vsize&quot;: 85,
+  &quot;version&quot;: 1,
+  &quot;locktime&quot;: 0,
+  &quot;vin&quot;: [
+    {
+      &quot;txid&quot;: &quot;a3c0e664267214a11274ba6fb71ae8c8d1c808d47499873c98d1acf612783aea&quot;,
+      &quot;vout&quot;: 1,
+      &quot;scriptSig&quot;: {
+        &quot;asm&quot;: &quot;&quot;,
+        &quot;hex&quot;: &quot;&quot;
+      },
+      &quot;sequence&quot;: 4294967295
+    }
+  ],
+  &quot;vout&quot;: [
+    {
+      &quot;value&quot;: 0.00200000,
+      &quot;n&quot;: 0,
+      &quot;scriptPubKey&quot;: {
+        &quot;asm&quot;: &quot;OP_DUP OP_HASH160 77007769e13c0834ced00a9c796e807232901feb OP_EQUALVERIFY OP_CHECKSIG&quot;,
+        &quot;hex&quot;: &quot;76a91477007769e13c0834ced00a9c796e807232901feb88ac&quot;,
+        &quot;reqSigs&quot;: 1,
+        &quot;type&quot;: &quot;pubkeyhash&quot;,
+        &quot;addresses&quot;: [
+          &quot;aBZgi9FCgRZ271eBJ96WyUKx8WoxAyoN2C&quot;
+        ]
+      }
+    }
+  ]
+}
+</code></pre>
+
+<h2 id="4-get-private-key">4. Get Private Key</h2>
+
+<p>You will need private key for transaction signing</p>
+
+<pre><code>dumpprivkey &lt;address&gt;
+</code></pre>
+
+<p>Private key will start with Y</p>
+
+<h1 id="5-sign-raw-transaction">5. Sign Raw Transaction</h1>
+
+<pre><code>Decode Raw Transaction and verify it before you sign it
+</code></pre>
+
+<p>The command is</p>
+
+<pre><code>signrawtransaction &lt;HEX_STRING&gt; &lt;PREV_Tx&gt; &lt;ARRAY_OF_PRIVATE_KEY&gt;
+</code></pre>
+
+<h2 id="5-1-sign-it-with-1st-key-privtx-is-input-when-create-raw-transaction">5.1 Sign it with 1st key. (privTx is input when create raw transaction)</h2>
+
+<pre><code>signrawtransaction 0100000001ea3a7812f6acd1983c879974d408c8d1c8e81ab76fba7412a114722664e6c0a30100000000ffffffff01400d0300000000001976a91477007769e13c0834ced00a9c796e807232901feb88ac00000000 '[{&quot;txid&quot;:&quot;a3c0e664267214a11274ba6fb71ae8c8d1c808d47499873c98d1acf612783aea&quot;,&quot;vout&quot;:1,&quot;scriptPubKey&quot;:&quot;a91470e65d62eef9beda8e45398e976be674225fbf8387&quot;,&quot;redeemScript&quot;:&quot;532103745b394a20747f09febbe2b34057586df24980d5645be7b181a613030814d34d210219ee4e32cbbdc71c386a3b51cda9bc858085c556259a2c8c24182286634e20fc21025cb3701dbb6d4b4503ed3405f236e315e273b6745431ebdba3282afeac262f0f2103981c7bb352ed9d8fcb62f07feab8ede8324cb86a1a400a041ab2145fee214aae54ae&quot;}]' '[&quot;&lt;1ST_PRIVATE_KEY&gt;&quot;]'
+</code></pre>
+
+<p>1st signing result. Hex will be longer. scriptSig is not empty string. And <code>complete=false</code> is indicate that this transaction is not complete yet</p>
+
+<pre><code class="language-js">{
+  &quot;hex&quot;: &quot;0100000001ea3a7812f6acd1983c879974d408c8d1c8e81ab76fba7412a114722664e6c0a301000000d600473044022065c2369720ed7ebcf1c452f9c1fb77535b8c7f9ac8fc04158999efa61209518402200a561afdff15261550248173fc46e56a1e22ea859e70139a5f8671c57c76d633014c8b532103745b394a20747f09febbe2b34057586df24980d5645be7b181a613030814d34d210219ee4e32cbbdc71c386a3b51cda9bc858085c556259a2c8c24182286634e20fc21025cb3701dbb6d4b4503ed3405f236e315e273b6745431ebdba3282afeac262f0f2103981c7bb352ed9d8fcb62f07feab8ede8324cb86a1a400a041ab2145fee214aae54aeffffffff01400d0300000000001976a91477007769e13c0834ced00a9c796e807232901feb88ac00000000&quot;,
+  &quot;complete&quot;: false,
+  &quot;errors&quot;: [
+    {
+      &quot;txid&quot;: &quot;a3c0e664267214a11274ba6fb71ae8c8d1c808d47499873c98d1acf612783aea&quot;,
+      &quot;vout&quot;: 1,
+      &quot;scriptSig&quot;: &quot;00473044022065c2369720ed7ebcf1c452f9c1fb77535b8c7f9ac8fc04158999efa61209518402200a561afdff15261550248173fc46e56a1e22ea859e70139a5f8671c57c76d633014c8b532103745b394a20747f09febbe2b34057586df24980d5645be7b181a613030814d34d210219ee4e32cbbdc71c386a3b51cda9bc858085c556259a2c8c24182286634e20fc21025cb3701dbb6d4b4503ed3405f236e315e273b6745431ebdba3282afeac262f0f2103981c7bb352ed9d8fcb62f07feab8ede8324cb86a1a400a041ab2145fee214aae54ae&quot;,
+      &quot;sequence&quot;: 4294967295,
+      &quot;error&quot;: &quot;Operation not valid with the current stack size&quot;
+    }
+  ]
+}
+</code></pre>
+
+<h2 id="5-2-get-hex-from-previous-sign-and-sign-it-with-second-key">5.2 Get hex from previous sign and sign it with second key</h2>
+
+<pre><code>signrawtransaction 0100000001ea3a7812f6acd1983c879974d408c8d1c8e81ab76fba7412a114722664e6c0a301000000d600473044022065c2369720ed7ebcf1c452f9c1fb77535b8c7f9ac8fc04158999efa61209518402200a561afdff15261550248173fc46e56a1e22ea859e70139a5f8671c57c76d633014c8b532103745b394a20747f09febbe2b34057586df24980d5645be7b181a613030814d34d210219ee4e32cbbdc71c386a3b51cda9bc858085c556259a2c8c24182286634e20fc21025cb3701dbb6d4b4503ed3405f236e315e273b6745431ebdba3282afeac262f0f2103981c7bb352ed9d8fcb62f07feab8ede8324cb86a1a400a041ab2145fee214aae54aeffffffff01400d0300000000001976a91477007769e13c0834ced00a9c796e807232901feb88ac00000000 '[{&quot;txid&quot;:&quot;a3c0e664267214a11274ba6fb71ae8c8d1c808d47499873c98d1acf612783aea&quot;,&quot;vout&quot;:1,&quot;scriptPubKey&quot;:&quot;a91470e65d62eef9beda8e45398e976be674225fbf8387&quot;,&quot;redeemScript&quot;:&quot;532103745b394a20747f09febbe2b34057586df24980d5645be7b181a613030814d34d210219ee4e32cbbdc71c386a3b51cda9bc858085c556259a2c8c24182286634e20fc21025cb3701dbb6d4b4503ed3405f236e315e273b6745431ebdba3282afeac262f0f2103981c7bb352ed9d8fcb62f07feab8ede8324cb86a1a400a041ab2145fee214aae54ae&quot;}]' '[&quot;&lt;2ND_PRIVATE_KEY&gt;&quot;]'
+</code></pre>
+
+<p>2nd signing Result</p>
+
+<pre><code class="language-js">{
+  &quot;hex&quot;: &quot;0100000001ea3a7812f6acd1983c879974d408c8d1c8e81ab76fba7412a114722664e6c0a301000000fd1f0100473044022065c2369720ed7ebcf1c452f9c1fb77535b8c7f9ac8fc04158999efa61209518402200a561afdff15261550248173fc46e56a1e22ea859e70139a5f8671c57c76d633014730440220718f70ad0cc0647f456a17f7330abc8dd22db323662d100479542374a105fb8d0220545b104f5959284c438ecaa21d1076a2272979ab611c298dac090a31ebcbe60701004c8b532103745b394a20747f09febbe2b34057586df24980d5645be7b181a613030814d34d210219ee4e32cbbdc71c386a3b51cda9bc858085c556259a2c8c24182286634e20fc21025cb3701dbb6d4b4503ed3405f236e315e273b6745431ebdba3282afeac262f0f2103981c7bb352ed9d8fcb62f07feab8ede8324cb86a1a400a041ab2145fee214aae54aeffffffff01400d0300000000001976a91477007769e13c0834ced00a9c796e807232901feb88ac00000000&quot;,
+  &quot;complete&quot;: false,
+  &quot;errors&quot;: [
+    {
+      &quot;txid&quot;: &quot;a3c0e664267214a11274ba6fb71ae8c8d1c808d47499873c98d1acf612783aea&quot;,
+      &quot;vout&quot;: 1,
+      &quot;scriptSig&quot;: &quot;00473044022065c2369720ed7ebcf1c452f9c1fb77535b8c7f9ac8fc04158999efa61209518402200a561afdff15261550248173fc46e56a1e22ea859e70139a5f8671c57c76d633014730440220718f70ad0cc0647f456a17f7330abc8dd22db323662d100479542374a105fb8d0220545b104f5959284c438ecaa21d1076a2272979ab611c298dac090a31ebcbe60701004c8b532103745b394a20747f09febbe2b34057586df24980d5645be7b181a613030814d34d210219ee4e32cbbdc71c386a3b51cda9bc858085c556259a2c8c24182286634e20fc21025cb3701dbb6d4b4503ed3405f236e315e273b6745431ebdba3282afeac262f0f2103981c7bb352ed9d8fcb62f07feab8ede8324cb86a1a400a041ab2145fee214aae54ae&quot;,
+      &quot;sequence&quot;: 4294967295,
+      &quot;error&quot;: &quot;Signature must be zero for failed CHECK(MULTI)SIG operation&quot;
+    }
+  ]
+}
+</code></pre>
+
+<h2 id="5-3-get-hex-from-previous-sign-and-sign-it-with-third-key">5.3 Get hex from previous sign and sign it with third key</h2>
+
+<pre><code>signrawtransaction 0100000001ea3a7812f6acd1983c879974d408c8d1c8e81ab76fba7412a114722664e6c0a301000000fd1f0100473044022065c2369720ed7ebcf1c452f9c1fb77535b8c7f9ac8fc04158999efa61209518402200a561afdff15261550248173fc46e56a1e22ea859e70139a5f8671c57c76d633014730440220718f70ad0cc0647f456a17f7330abc8dd22db323662d100479542374a105fb8d0220545b104f5959284c438ecaa21d1076a2272979ab611c298dac090a31ebcbe60701004c8b532103745b394a20747f09febbe2b34057586df24980d5645be7b181a613030814d34d210219ee4e32cbbdc71c386a3b51cda9bc858085c556259a2c8c24182286634e20fc21025cb3701dbb6d4b4503ed3405f236e315e273b6745431ebdba3282afeac262f0f2103981c7bb352ed9d8fcb62f07feab8ede8324cb86a1a400a041ab2145fee214aae54aeffffffff01400d0300000000001976a91477007769e13c0834ced00a9c796e807232901feb88ac00000000 '[{&quot;txid&quot;:&quot;a3c0e664267214a11274ba6fb71ae8c8d1c808d47499873c98d1acf612783aea&quot;,&quot;vout&quot;:1,&quot;scriptPubKey&quot;:&quot;a91470e65d62eef9beda8e45398e976be674225fbf8387&quot;,&quot;redeemScript&quot;:&quot;532103745b394a20747f09febbe2b34057586df24980d5645be7b181a613030814d34d210219ee4e32cbbdc71c386a3b51cda9bc858085c556259a2c8c24182286634e20fc21025cb3701dbb6d4b4503ed3405f236e315e273b6745431ebdba3282afeac262f0f2103981c7bb352ed9d8fcb62f07feab8ede8324cb86a1a400a041ab2145fee214aae54ae&quot;}]' '[&quot;&lt;3RD_PRIVATE_KEY&gt;&quot;]'
+</code></pre>
+
+<p>Sign Result. <code>complete=true</code> - Now signing is complete. Broadcast this hex to publish your transaction</p>
+
+<pre><code>{
+  &quot;hex&quot;: &quot;0100000001ea3a7812f6acd1983c879974d408c8d1c8e81ab76fba7412a114722664e6c0a301000000fd670100473044022065c2369720ed7ebcf1c452f9c1fb77535b8c7f9ac8fc04158999efa61209518402200a561afdff15261550248173fc46e56a1e22ea859e70139a5f8671c57c76d633014730440220718f70ad0cc0647f456a17f7330abc8dd22db323662d100479542374a105fb8d0220545b104f5959284c438ecaa21d1076a2272979ab611c298dac090a31ebcbe60701483045022100c3372f05abcc039de8f229419504db9beac029826fe32e8600e5cbcd420de83602206449032b2cb1f8793739ec4997dc0f5c65aef560b4ffff19ce21106256268bcc014c8b532103745b394a20747f09febbe2b34057586df24980d5645be7b181a613030814d34d210219ee4e32cbbdc71c386a3b51cda9bc858085c556259a2c8c24182286634e20fc21025cb3701dbb6d4b4503ed3405f236e315e273b6745431ebdba3282afeac262f0f2103981c7bb352ed9d8fcb62f07feab8ede8324cb86a1a400a041ab2145fee214aae54aeffffffff01400d0300000000001976a91477007769e13c0834ced00a9c796e807232901feb88ac00000000&quot;,
+  &quot;complete&quot;: true
+}
+</code></pre>
+
+<h1 id="6-send-raw-transaction">6. Send Raw Transaction</h1>
+
+<pre><code>sendrawtransaction 0100000001ea3a7812f6acd1983c879974d408c8d1c8e81ab76fba7412a114722664e6c0a301000000fd670100473044022065c2369720ed7ebcf1c452f9c1fb77535b8c7f9ac8fc04158999efa61209518402200a561afdff15261550248173fc46e56a1e22ea859e70139a5f8671c57c76d633014730440220718f70ad0cc0647f456a17f7330abc8dd22db323662d100479542374a105fb8d0220545b104f5959284c438ecaa21d1076a2272979ab611c298dac090a31ebcbe60701483045022100c3372f05abcc039de8f229419504db9beac029826fe32e8600e5cbcd420de83602206449032b2cb1f8793739ec4997dc0f5c65aef560b4ffff19ce21106256268bcc014c8b532103745b394a20747f09febbe2b34057586df24980d5645be7b181a613030814d34d210219ee4e32cbbdc71c386a3b51cda9bc858085c556259a2c8c24182286634e20fc21025cb3701dbb6d4b4503ed3405f236e315e273b6745431ebdba3282afeac262f0f2103981c7bb352ed9d8fcb62f07feab8ede8324cb86a1a400a041ab2145fee214aae54aeffffffff01400d0300000000001976a91477007769e13c0834ced00a9c796e807232901feb88ac00000000
+</code></pre>
+
+</article>
+<script type="text/javascript">
+    google_ad_client = "ca-pub-6790702287470373";
+    google_ad_slot = "4471144903";
+    google_ad_width = 728;
+    google_ad_height = 90;
+</script>
+
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "padawantech" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+</div>
+<script src="js/theme.min.js" type="text/javascript"></script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-84195554-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+</body>
+</html>
+

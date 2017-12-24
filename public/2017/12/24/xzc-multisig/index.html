@@ -8,7 +8,7 @@
 
 <meta name="description" content="In order to be the best ... you can be, your tools  must be sharp">
 
-<title>XZC Multisignature</title>
+<title>XZC with 3 of 4 Multisignature</title>
 <meta name="generator" content="Hugo 0.31.1" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/pojoaque.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
@@ -27,7 +27,7 @@
         <h3 data-open="last-posts">Padawan journey - Most recent posts</h3>
         <ul>
             
-            <li><a href="https://dev.jigko.net/2017/12/24/xzc-multisig/">XZC Multisignature</a></li>
+            <li><a href="https://dev.jigko.net/2017/12/24/xzc-multisig/">XZC with 3 of 4 Multisignature</a></li>
             
             <li><a href="https://dev.jigko.net/2017/04/18/cljs-reactnative-reframe-en/">[CLJS][ReactNative] Create React Native app with ClojureScript</a></li>
             
@@ -103,7 +103,7 @@
 </div>
 <div class="col-md-9 content">
 
-<h1>XZC Multisignature</h1>
+<h1>XZC with 3 of 4 Multisignature</h1>
 <h4>Published 12-24-2017 11:07:16
 
 </h4>
@@ -132,12 +132,18 @@
 <article>
     
 
-<p>Hello
-This use zcoin-qt or zcoin-cli</p>
+<p>This post will show a step to setup (<sup>3</sup>&frasl;<sub>4</sub>) multisignature wallet and how to send transaction from it</p>
+
+<h1 id="0-setup">0. Setup</h1>
+
+<p>We will create multisignature address that will require <code>3/4</code> key when signing.<br />
+ - So you need to prepare 4 private key (We use 4 xzc-address/public-key when setup multisig address and <sup>3</sup>&frasl;<sub>4</sub> private key when sending a transaction).<br />
+You can just create new address from your existing wallet or you can create new wallet or private key which not relate from your old wallet.<br />
+ - And zcoin-qt or zcoin-cli</p>
 
 <h1 id="1-create-multisignature-address">1. Create Multisignature address</h1>
 
-<p>In this post we will create multisignature address that will require <code>3/4</code> key when signing.</p>
+<p>It is <code>3/4</code> key required. So first param is 3 (3 required) and second param is 4 (4 address)</p>
 
 <pre><code>// Different address ordering will get different address
 createmultisig 3 '[&quot;aNjWZuLTyCEWXr53eXGx4rx8CWUWiKxb9V&quot;,&quot;aLQSorufappuwunj38TG6wZmkmeEk65xjq&quot;,&quot;a6kyUv65AxHqbjMd4w2ybvjaYwidHZsdYK&quot;,&quot;a2VowQ1X1Dh7oRBPzRCDr9Ktn99Lgpiw7y&quot;]'
@@ -160,7 +166,7 @@ createmultisig 3 '[&quot;aNjWZuLTyCEWXr53eXGx4rx8CWUWiKxb9V&quot;,&quot;aLQSoruf
 
 <h2 id="3-1-get-scriptpubkey">3.1 Get ScriptPubKey</h2>
 
-<p>validateaddress <address></p>
+<p>validateaddress 3zfBYGjxri137ymrGVqazE5mZxu4Uv4kog</p>
 
 <pre><code class="language-js">{
   &quot;isvalid&quot;: true,

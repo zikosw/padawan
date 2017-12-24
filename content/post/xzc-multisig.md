@@ -1,16 +1,21 @@
 +++
-title = "XZC Multisignature"
+title = "XZC with 3 of 4 Multisignature"
 date = 2017-12-24T11:07:16+07:00
 description = ""
 tags = ["zcoin","xzc","multisig","multi-signature"]
 
 +++
 
-Hello
-This use zcoin-qt or zcoin-cli
+This post will show a step to setup (3/4) multisignature wallet and how to send transaction from it
+
+# 0. Setup
+We will create multisignature address that will require `3/4` key when signing.  
+ - So you need to prepare 4 private key (We use 4 xzc-address/public-key when setup multisig address and 3/4 private key when sending a transaction).   
+You can just create new address from your existing wallet or you can create new wallet or private key which not relate from your old wallet.  
+ - And zcoin-qt or zcoin-cli
 
 # 1. Create Multisignature address
-In this post we will create multisignature address that will require `3/4` key when signing.
+It is `3/4` key required. So first param is 3 (3 required) and second param is 4 (4 address)
 
 ```
 // Different address ordering will get different address
@@ -33,7 +38,9 @@ https://explorer.zcoin.io/api/getrawtransaction?txid=a3c0e664267214a11274ba6fb71
 # 3. Create Raw Transaction
 ## 3.1 Get ScriptPubKey 
 
-validateaddress <address>
+validateaddress 3zfBYGjxri137ymrGVqazE5mZxu4Uv4kog
+
+
 ```js
 {
   "isvalid": true,

@@ -15,10 +15,10 @@ You can just create new address from your existing wallet or you can create new 
  - And zcoin-qt or zcoin-cli
 
 # 1. Create Multisignature address
-It is `3/4` key required. So first param is 3 (3 required) and second param is 4 (4 address)
+It is `3/4` key required. So first param is 3 (3 required) and second param is 4 (4 address/pubkey)
 
 ```
-// Different address ordering will get different address
+// Different address (pubkey) ordering will get different address
 createmultisig 3 '["aNjWZuLTyCEWXr53eXGx4rx8CWUWiKxb9V","aLQSorufappuwunj38TG6wZmkmeEk65xjq","a6kyUv65AxHqbjMd4w2ybvjaYwidHZsdYK","a2VowQ1X1Dh7oRBPzRCDr9Ktn99Lgpiw7y"]'
 ```
 You will get this

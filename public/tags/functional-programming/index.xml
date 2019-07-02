@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Functional Programming on Padawan journey</title>
+    <title>functional programming on Padawan journey</title>
     <link>https://dev.jigko.net/tags/functional-programming/</link>
-    <description>Recent content in Functional Programming on Padawan journey</description>
+    <description>Recent content in functional programming on Padawan journey</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Jedi Z</copyright>

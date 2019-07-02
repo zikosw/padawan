@@ -6,17 +6,18 @@ tags = [
     "re-frame",
     "reagent",
 ]
+draft = true
 +++
 
 
 
 # เครื่องมือที่ต้องใช้
  - NodeJs runtime [ดาวน์โหลดได้จากที่นี่](https://nodejs.org/en/download/)
- - JDK สำหรับรัน Clojure [ดาวน์โหลดได้จากที่นี่](http://www.oracle.com/technetwork/java/javase/downloads/index.html)  
- - Leiningen เป็น Build tools สำหรับ Clojure [ดาวน์โหลดได้จากที่นี่](https://leiningen.org/)  
+ - JDK สำหรับรัน Clojure [ดาวน์โหลดได้จากที่นี่](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+ - Leiningen เป็น Build tools สำหรับ Clojure [ดาวน์โหลดได้จากที่นี่](https://leiningen.org/)
 
 # สร้างโปรเจค
-โปรเจกนี้เราจะสร้างโดยใช้ reagent-frontend-template 
+โปรเจกนี้เราจะสร้างโดยใช้ reagent-frontend-template
 
 ```
 lein new reagent-frontend <ชื่อโปรเจค>
@@ -28,7 +29,7 @@ lein new reagent-frontend reagent-example
 ```
 lein figwheel
 ```
-สักพัก browser ก็จะเปิดเว็บ `http://localhost:3449/index.html` ขึ้นมา ซึ่งตอนนี้จะมีหน้าตาแบบนี้   
+สักพัก browser ก็จะเปิดเว็บ `http://localhost:3449/index.html` ขึ้นมา ซึ่งตอนนี้จะมีหน้าตาแบบนี้
 ![0](/img/cljs-reagent/0-started.png)
 
 
@@ -50,7 +51,7 @@ lein figwheel
 อะไร
 
 # Hiccup Syntax
-what is it?  
+what is it?
  - tag
  - attributes
  - child

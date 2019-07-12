@@ -1,2 +1,8 @@
 *.swp
 public-bak/
+.firebase/
+
+\.DS_Store
+
+
+firebase-debug\.log

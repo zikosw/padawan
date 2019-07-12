@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Haskell 1O1</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# Haskell lOl
+
+
+---
+
+-- Single line comments start with two dashes.
+{- Multiline comments can be enclosed
+in a block like this.
+-}
+
+
+# Primitive Datatypes and Operators
+
+You have numbers, Math is what you would expect
+```haskell
+1 + 1 -- 2
+8 - 1 -- 7
+10 * 2 -- 20
+35 / 5 -- 7.0
+```
+
+Boolean values are primitives
+```haskell
+-- Boolean operations
+not True -- False
+not False -- True
+1 == 1 -- True
+1 /= 1 -- False
+1 < 10 -- True
+```
+
+---
+
+## Strings and characters
+
+```
+
+"This is a string."
+'a' -- character
+
+-- Strings can be concatenated
+"Hello " ++ "world!" -- "Hello world!"
+```
+
+## Lists
+
+-- Every element in a list must have the same type.
+-- These two lists are equal:
+
+```haskell
+[1, 2, 3, 4, 5]
+[1..5]
+
+-- You can create a step in a range.
+[0,2..10] -- [0, 2, 4, 6, 8, 10]
+[5..1] -- [] (Haskell defaults to incrementing)
+[5,4..1] -- [5, 4, 3, 2, 1]
+
+-- indexing into a list
+[1..10] !! 3 -- 4 (zero-based indexing)
+```
+
+---
+
+
+You can also have infinite lists in Haskell!
+
+```haskell
+[1..] -- a list of all the natural numbers
+```
+
+Infinite lists work because Haskell has *"lazy evaluation"*. This means
+that Haskell only evaluates things when it needs to. So you can ask for
+the 1000th element of your list and Haskell will give it to you:
+
+```haskell
+[1..] !! 999 -- 1000
+```
+
+
+```haskell
+-- joining two lists
+[1..5] ++ [6..10]
+
+-- adding to the head of a list
+0:[1..5] -- [0, 1, 2, 3, 4, 5]
+
+-- more list operations
+head [1..5] -- 1
+tail [1..5] -- [2, 3, 4, 5]
+init [1..5] -- [1, 2, 3, 4]
+last [1..5] -- 5
+```
+
+---
+
+```haskell
+-- list comprehensions
+[x*2 | x <- [1..5]] -- [2, 4, 6, 8, 10]
+
+-- with a conditional
+[x*2 | x <- [1..5], x*2 > 4] -- [6, 8, 10]
+
+```
+
+---
+
+
+## Tuple
+
+Every element in a tuple can be a different type, but a tuple has a fixed length.
+
+```haskell
+("haskell", 1)
+
+-- accessing elements of a pair (i.e. a tuple of length 2)
+fst ("haskell", 1) -- "haskell"
+snd ("haskell", 1) -- 1
+
+-- pair element accessing does not work on n-tuples (i.e. triple, quadruple, etc)
+snd ("snd", "can't touch this", "da na na na") -- error! see function below
+```
+
+---
+
+# Functions
+
+A simple function that takes two variables
+
+```haskell
+add a b = a + b
+```
+
+-- Note that if you are using ghci (the Haskell interpreter). You'll need to use `let`, i.e. `let add a b = a + b`
+
+```haskell
+-- Using the function
+add 1 2 -- 3
+
+-- You can also put the function name between the two arguments
+-- with backticks:
+1 `add` 2 -- 3
+
+-- You can also define functions that have no letters! This lets
+-- you define your own operators! Here's an operator that does
+-- integer division
+(//) a b = a `div` b
+35 // 4 -- 8
+
+```
+
+---
+
+## Guards
+
+an easy way to do branching in functions
+
+```haskell
+fib x
+  | x < 2 = 1
+  | otherwise = fib (x - 1) + fib (x - 2)
+
+```
+
+Pattern matching is similar. Here we have given three different
+equations that define fib. Haskell will automatically use the first
+equation whose left hand side pattern matches the value.
+
+```haskell
+fib 1 = 1
+fib 2 = 2
+fib x = fib (x - 1) + fib (x - 2)
+```
+
+---
+
+## Pattern matching
+-- Pattern matching on tuples
+```haskell
+sndOfTriple (_, y, _) = y -- use a wild card (_) to bypass naming unused value
+```
+
+-- Pattern matching on lists. Here `x` is the first element
+-- in the list, and `xs` is the rest of the list. We can write
+-- our own map function:
+```haskell
+myMap func [] = []
+myMap func (x:xs) = func x:(myMap func xs)
+```
+
+## Anonymous
+
+Anonymous functions are created with a backslash followed by
+all the arguments.
+
+```haskell
+myMap (\x -> x + 2) [1..5] -- [3, 4, 5, 6, 7]
+```
+
+---
+
+## Partial application
+
+Partial application: if you don't pass in all the arguments to a function,
+it gets "partially applied". That means it returns a function that takes the
+rest of the arguments.
+
+```haskell
+add a b = a + b
+foo = add 10 -- foo is now a function that takes a number and adds 10 to it
+foo 5 -- 15
+```
+
+-- Another way to write the same thing
+```haskell
+foo = (10+)
+foo 5 -- 15
+```
+
+---
+
+## Function composition
+the operator `.` chains functions together.
+For example, here foo is a function that takes a value. It adds 10 to it,
+multiplies the result of that by 4, and then returns the final value.
+
+```haskell
+foo = (4*) . (10+)
+
+-- 4*(10+5) = 60
+foo 5 -- 60
+```
+
+---
+
+## Precedence
+
+Haskell has an operator called `$`. This operator applies a function
+to a given parameter. In contrast to standard function application, which
+has highest possible priority of 10 and is left-associative, the `$` operator
+has priority of 0 and is right-associative. Such a low priority means that
+the expression on its right is applied as a parameter to the function on its left.
+
+```haskell
+-- before
+even (fib 7) -- false
+
+-- equivalently
+even $ fib 7 -- false
+
+-- composing functions
+even . fib $ 7 -- false
+```
+
+
+---
+
+# Type signatures
+
+Haskell has a very strong type system, and every valid expression has a type.
+
+Some basic types:
+```haskell
+5 :: Integer
+"hello" :: String
+True :: Bool
+```
+
+Functions have types too.
+```haskell
+-- `not` takes a boolean and returns a boolean:
+-- not :: Bool -> Bool
+```
+
+-- Here's a function that takes two arguments:
+```haskell
+add :: Integer -> Integer -> Integer
+```
+
+-- When you define a value, it's good practice to write its type above it:
+```haskell
+double :: Integer -> Integer
+double x = x * 2
+```
+
+---
+
+# Control Flow and If Expressions
+
+
+if-expressions
+```haskell
+haskell = if 1 == 1 then "awesome" else "awful" -- haskell = "awesome"
+```
+
+if-expressions can be on multiple lines too, indentation is important
+```haskell
+haskell = if 1 == 1
+            then "awesome"
+            else "awful"
+```
+
+case expressions: Here's how you could parse command line arguments
+```haskell
+case args of
+  "help" -> printHelp
+  "start" -> startProgram
+  _ -> putStrLn "bad args"
+```
+
+---
+
+Haskell doesn't have loops; it uses recursion instead.
+map applies a function over every element in a list
+
+```haskell
+map (*2) [1..5] -- [2, 4, 6, 8, 10]
+```
+
+you can make a for function using map
+```haskell
+for array func = map func array
+```
+
+and then use it
+```haskell
+for [0..5] $ \i -> show i
+```
+
+we could've written that like this too:
+```haskell
+for [0..5] show
+```
+
+You can use foldl or foldr to reduce a list
+foldl <fn> <initial value> <list>
+```haskell
+foldl (\x y -> 2*x + y) 4 [1,2,3] -- 43
+```
+
+```haskell
+-- This is the same as
+(2 * (2 * (2 * 4 + 1) + 2) + 3)
+```
+
+---
+
+# Data Types
+
+
+Here's how you make your own data type in Haskell
+
+```haskell
+data Color = Red | Blue | Green
+```
+
+ Now you can use it in a function:
+
+```haskell
+say :: Color -> String
+say Red   = "You are Red!"
+say Blue  = "You are Blue!"
+say Green = "You are Green!"
+```
+
+Your data types can have parameters too:
+
+```haskell
+data Maybe a = Nothing | Just a
+```
+
+These are all of type Maybe
+```haskell
+Just "hello"    -- of type `Maybe String`
+Just 1          -- of type `Maybe Int`
+Nothing         -- of type `Maybe a` for any `a`
+```
+
+---
+
+# Haskell IO
+
+While IO can't be explained fully without explaining monads,
+it is not hard to explain enough to get going.
+
+When a Haskell program is executed, `main` is
+called. It must return a value of type `IO a` for some type `a`. For example:
+
+```haskell
+main :: IO ()
+main = putStrLn $ "Hello, sky! " ++ (say Blue)
+-- putStrLn has type String -> IO ()
+```
+
+It is easiest to do IO if you can implement your program as
+a function from String to String. The function
+   interact :: (String -> String) -> IO ()
+inputs some text, runs a function on it, and prints out the
+output.
+
+```haskell
+countLines :: String -> String
+countLines = show . length . lines
+
+main' = interact countLines
+```
+
+---
+
+You can think of a value of type `IO ()` as representing a
+sequence of actions for the computer to do, much like a
+computer program written in an imperative language. We can use
+the `do` notation to chain actions together. For example:
+
+The type `IO` is an example of a "monad". The way Haskell uses a monad to
+do IO allows it to be a purely functional language. Any function that
+interacts with the outside world (i.e. does IO) gets marked as `IO` in its
+type signature. This lets us reason about which functions are "pure" (don't
+interact with the outside world or modify state) and which functions aren't.
+
+This is a powerful feature, because it's easy to run pure functions
+concurrently; so, concurrency in Haskell is very easy.
+
+
+---
+
+# The Haskell REPL
+
+
+Start the repl by typing `ghci`.
+Now you can type in Haskell code. Any new values
+need to be created with `let`:
+
+```haskell
+let foo = 5
+```
+
+You can see the type of any value or expression with `:t`:
+
+```haskell
+> :t foo
+foo :: Integer
+
+> :t (:)
+(:) :: a -> [a] -> [a]
+```
+
+You can get additional information on any `name` using `:i`:
+
+```haskell
+> :i (+)
+class Num a where
+  (+) :: a -> a -> a
+  ...
+    -- Defined in ‘GHC.Num’
+infixl 6 +
+```
+
+
+---
+
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>

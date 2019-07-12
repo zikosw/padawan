@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Jedi Z</copyright>
-    <lastBuildDate>Sun, 24 Dec 2017 11:07:16 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jul 2019 11:07:16 +0700</lastBuildDate>
     
 	<atom:link href="https://dev.jigko.net/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Haskell 101</title>
+      <link>https://dev.jigko.net/2019/07/11/haskell101/</link>
+      <pubDate>Thu, 11 Jul 2019 11:07:16 +0700</pubDate>
+      
+      <guid>https://dev.jigko.net/2019/07/11/haskell101/</guid>
+      <description>Key takeaway  Functional Programming is not a language, it&amp;rsquo;s a mindset.
+  Function is value Composite Pure function Use interface instead of Class  Slide
+Problem
+Code</description>
+    </item>
     
     <item>
       <title>XZC with 3 of 4 Multisignature</title>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Haskell 1O1</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# Haskell for fun(ctional) and (no) profit
+![](https://www.haskell.org/img/haskell-logo.svg)
+
+---
+
+# Goal
+
+## Introduction to functional programming.
+
+## *Programming language shapes Programming thought*
+
+> Haskell from zero to hero. NOPE!
+
+---
+
+# What's Haskell?
+
+- Statically typed
+- **Purely** functional programming language
+- Type inference
+- **Lazy** evaluation
+- Type classes
+
+---
+
+# What's functional programming?
+- Can't change variable value - Immutable
+- No 'if' - control flow
+- No 'for' - loop
+- *Strong* Static typed
+- Monad - IO Monad, Category theory, etc ...
+
+---
+
+# No, it's not.
+
+---
+
+
+## Functions are thing (behave like data)
+- Can bind to variable/symbol
+- Can use as parameter - HOF
+- Can use as return value - HOF
+
+
+### can be used like value
+
+
+---
+
+## Composite is everywhere !!!!
+
+![](https://dev.jigko.net/slides/haskell-101/comp0.png)
+---
+![](https://dev.jigko.net/slides/haskell-101/comp1.png)
+---
+<img height="600px" src="https://dev.jigko.net/slides/haskell-101/pyramid.png"/>
+
+---
+<img height="600px" src="https://dev.jigko.net/slides/haskell-101/pyramid1.png"/>
+
+---
+<img height="600px" src="https://dev.jigko.net/slides/haskell-101/real0.png"/>
+
+---
+<img height="600px" src="https://dev.jigko.net/slides/haskell-101/real1.png"/>
+---
+
+<img height="350px" src="https://dev.jigko.net/slides/haskell-101/real2.png"/>
+
+<img width="800px" src="https://dev.jigko.net/slides/haskell-101/railway.png"/>
+
+---
+
+## Pure function
+
+> Same input -> same output
+
+> No side-effect
+
+```go
+var orderCount = 8
+func PreOrder(o *Order) error {
+  o.status = "success"    // Mutate
+  orderCount++            // Mutate global variable
+  if orderCount > 10 {
+    return errorf.New("sold out")
+  }
+}
+
+func PreOrder(o Order, orderCnt int) (Order, error) {
+  if orderCnt > 10 {
+    return o, errorf.New("sold out")
+  }
+  o.status = "success"
+  return o, nil
+}
+
+func DeleteUser(u User, dbCon *pg.DB) error {
+  dbCon.Delete(u) // Side effect, this one's fine. We need side effect to do something useful. :|
+  dbCon.Close()   // Side effect + mutate shared/global variable :(
+  return nil
+}
+```
+
+---
+
+## Types are not Classes
+> use Interface / Type class
+
+
+```java
+AbstractClass CryptoCurrency {
+  Transaction Transfer(destination string, amount int) // interface
+}
+
+Class Bitcoin extend CryptoCurrency {
+  Transaction Transfer(destination string, amount int) // implementation
+}
+
+Class AccountBase {
+  int GetAccountNounce() // implementation
+}
+
+Class Ethereum extend AccountBase, CryptoCurrency { // multiple inheritance!!!
+  Transaction Transfer(destination string, amount int)  // implementation
+}
+
+
+```
+---
+```go
+
+// somewhere
+type Transferable interface {
+  Transfer(destination string, amount int) (Transaction, error)
+}
+
+// in package 'bitcoin'
+func (btc Bitcoin) Transfer(destination string, amount int) (Transaction, error) {}
+
+// in package 'ethereum'
+func (eth Ethereum) Transfer(destination string, amount int) (Transaction, error) {}
+
+//
+// How to use it?
+func Donate (somethingThatTransferable Transferable) (Transaction, error) {
+  somethingThatTransferable.Transfer("ziko", 999)
+}
+
+func main() {
+  tx, err := Donate(FaxBTCWallet)
+  tx, err := Donate(FaxETHWallet)
+}
+```
+
+---
+
+# Pros of Functional programming
+
+
+|                |Pure,|Statically typed,|Immutable,| Better func interface |
+| -------------------   |:------:| ------------:| -------:|----:|
+| Less bug          | Y      |    Y         |  Y      | Y |
+| Code Reasoning        | Y      |    Y         |  Y      | Y |
+| Testing              | Y | Y | Y | Y |
+| Parallel             | Y      |    -         |  Y      | - |
+| Better reusability | Y | - | - | Y |
+
+- Better func interface - no OOP-class-like/inheritance
+
+---
+
+# QuickSort in Haskell
+
+```haskell
+quicksort [] = []
+quicksort (headAsPivot:theRest) =
+    (quicksort left) ++ [headAsPivot] ++ (quicksort right)
+    where
+        left = filter (< headAsPivot) theRest
+        right = filter (>= headAsPivot) theRest
+```
+
+---
+
+## Guards
+
+an easy way to do branching in functions
+
+```haskell
+fib x
+  | x < 2 = 1
+  | otherwise = fib (x - 1) + fib (x - 2)
+
+```
+
+## Pattern matching
+Pattern matching is similar. Here we have given three different
+equations that define fib. Haskell will automatically use the first
+equation whose left hand side pattern matches the value.
+
+```haskell
+fib 1 = 1
+fib 2 = 2
+fib x = fib (x - 1) + fib (x - 2)
+```
+
+---
+
+## Anonymous
+
+Anonymous functions are created with a backslash followed by
+all the arguments.
+
+```haskell
+(\x -> x + 2) 5 -- 7
+```
+
+## List comprehension
+
+```haskell
+[x*2 | x <- [1..5]] -- [2, 4, 6, 8, 10]
+
+-- with a conditional
+[(x,y) | x <- ["a","b","c"], y <- ["red","green", "blue"], not (x == "a" && y == "red")]
+[("a","green"),("a","blue"),("b","red"),("b","green"),("b","blue"),("c","red"),("c","green"),("c","blue")]
+```
+---
+
+## Partial application
+
+Partial application: if you don't pass in all the arguments to a function,
+it gets "partially applied". That means it returns a function that takes the
+rest of the arguments.
+
+```haskell
+add a b = a + b
+addWith10 = add 10
+addWith10 5 -- 15
+```
+
+-- Another way to write the same thing
+```haskell
+addWith10 = (10+)
+addWith10 5 -- 15
+```
+
+---
+
+
+<img height="600px" src="https://dev.jigko.net/slides/haskell-101/mapreduce.png"/>
+
+
+---
+Haskell doesn't have loops; it uses recursion instead.
+map applies a function over every element in a list
+
+```haskell
+map (*2) [1..5] -- [2, 4, 6, 8, 10]
+```
+
+
+You can use foldl or foldr to reduce a list
+
+```haskell
+foldl <fn> <initial value> <list>
+
+foldl (\x y -> 2*x + y) 4 [1,2,3] -- 43
+```
+
+
+This is the same as
+```haskell
+(2 * (2 * (2 * 4 + 1) + 2) + 3)
+```
+
+```haskell
+filter (\(_,color) -> color=="red") [(x,y) | x <- ["a","b","c"], y <- ["red","green", "blue"], not (x == "a" && y == "red")]
+-- [("b","red"),("c","red")]
+```
+
+---
+<img width="800px" src="https://dev.jigko.net/slides/haskell-101/pattern0.png"/>
+---
+<img width="800px" src="https://dev.jigko.net/slides/haskell-101/pattern1.png"/>
+---
+<img width="800px" src="https://dev.jigko.net/slides/haskell-101/pattern2.png"/>
+
+```haskell
+map anAction aList
+```
+
+
+
+---
+![](https://pbs.twimg.com/media/DF0z1MoXgAAbhak?format=jpg&name=small)
+
+---
+
+# Polymorphism
+
+- Parameteric polymorphism
+
+ - List, HashMap
+
+- Bounded polymorphism
+
+ - Interface, inheritance
+
+---
+
+## Array manipulate
+
+---
+
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>

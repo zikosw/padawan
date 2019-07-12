@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>functional on Padawan journey</title>
+    <link>https://dev.jigko.net/tags/functional/</link>
+    <description>Recent content in functional on Padawan journey</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Jedi Z</copyright>
+    <lastBuildDate>Thu, 11 Jul 2019 11:07:16 +0700</lastBuildDate>
+    
+	<atom:link href="https://dev.jigko.net/tags/functional/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Haskell 101</title>
+      <link>https://dev.jigko.net/2019/07/11/haskell101/</link>
+      <pubDate>Thu, 11 Jul 2019 11:07:16 +0700</pubDate>
+      
+      <guid>https://dev.jigko.net/2019/07/11/haskell101/</guid>
+      <description>Key takeaway  Functional Programming is not a language, it&amp;rsquo;s a mindset.
+  Function is value Composite Pure function Use interface instead of Class  Slide
+Problem
+Code</description>
+    </item>
+    
+  </channel>
+</rss>

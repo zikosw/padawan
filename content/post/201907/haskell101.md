@@ -22,3 +22,13 @@ tags = ["haskell","functional"]
 
 [Code](https://dev.jigko.net/slides/haskell-101/array-crush.hs)
 
+---
+
+## Books
+
+Haskell
+- https://learnxinyminutes.com/docs/haskell/
+- http://learnyouahaskell.com/chapters
+
+FP
+- https://fsharpforfunandprofit.com/fppatterns/
